@@ -1,7 +1,6 @@
 # Noor Library Website
 
-## Project Name:  
-Noor Library Website 
+## Project Name: Noor Library Website 
 
 ### Tools & Skills Used in the Project:
 - Flask
