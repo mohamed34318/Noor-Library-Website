@@ -1,0 +1,80 @@
+{% extends 'Home.html' %}
+
+{% block title %} Manager author {% endblock %}
+
+{% block content %}
+
+<div class="wrapper">
+  <div class="sidebar">
+    <h2>Admin Page</h2>
+    <ul>
+      <li><a href="{{url_for('admin_pages')}}" target="_blank"><i class="fas fa-home"></i>Home</a></li>
+      <li><a target="_blank" href="{{url_for('manage_user')}}"><i class="fas fa-user"></i>Manage user</a></li>
+      <li><a target="_blank" href="{{url_for('manage_books')}}"><i class="fas fa-user"></i>Manage Books</a></li>
+      <li><a href="{{url_for('manage_author')}}"><i class="fas fa-user"></i>Manage author</a>
+      </li>
+      <li><a target="_blank" href="{{url_for('home_pages')}}"><i class='fa fa-wpexplorer'></i> Noor library Website</a>
+      </li>
+      <li><a href="{{url_for('login_page')}}"><iconify-icon icon="bx:log-out" width="29" height="20"></iconify-icon>
+          LOG OUT</a></li>
+    </ul>
+    </ul>
+    <div class="social_media">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <div class="main_content">
+    <div class="header">Welcome!! Have a nice day.</div>
+    <div class="info">
+      <div class="container">
+        <div class="row">
+          <a href="{{url_for('add_author')}}"> <button type="button" class="btn btn-primary">Add author</button></a>
+          <h1 class="he23">Manage author</h1>
+          <table class="table-latitude">
+            <thead>
+
+              <th>author_id</th>
+              <th>name_author</th>
+              <th>rate</th>
+              <th>narionality</th>
+              <th>gender</th>
+              <th>link_image</th>
+              <th>edit</th>
+              <th>remove</th>
+
+            </thead>
+            <tfoot>
+              <tr>
+                <td colspan=6>Contact details for the Knowledge and Development Team</td>
+              </tr>
+            </tfoot>
+            <tbody>
+              {% for row in rows %}
+              <tr>
+                <th>{{row.author_id}}</th>
+                <th>{{row.name_author}}</th>
+                <th>{{row.rate}}</th>
+                <td>{{row.nationality}}</td>
+                <td>{{row.gender}}</td>
+                <td>{{row.link_image}}</td>
+
+                <td><a href="/update_authors/{{row.author_id}}"><button class="button">Update</button></a>
+                </td>
+                <td><a href="/remove_author_page/{{row.author_id}}"><button class="button-danger">Remove</button></a></td>
+              </tr>
+              {% endfor %}
+
+            </tbody>
+
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+
+{% endblock %}

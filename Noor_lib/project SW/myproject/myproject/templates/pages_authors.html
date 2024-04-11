@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/all.min.css">
+  <link rel="stylesheet" href="style/code.css"> -->
+
+<!-- ***************************************** -->
+
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'css/normalize_pages_authors.css')}}">
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'css/style_pages_authors.css')}}">
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'css/all.min_pages_authors')}}">
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'css/code_pages_authors')}}">
+  
+<!-- ***************************************** -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Work+Sans:ital,wght@0,200;0,500;0,600;0,700;0,800;1,200;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+
+
+  <title>MainPage</title>
+
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="containerr">
+        <div class="settings">
+          <img class='avatar' src="./images/avatar-05.png" alt="">
+          <div class="settingsMenu">
+            <div class="settingsheader">
+              <img src="./images/avatar-05.png" alt="">
+              <p>Mohamed Elagamy</p>
+            </div>
+            <!-- *********************************** -->
+            <ul class="info">
+              <li style="color: #45b09e;"> <a href="{{url_for('user_informations')}}"
+                      style="color: #45b09e;"><i class="fa-solid fa-gear"></i>الاعدادات</a> </li>
+              <a href="{{url_for('login_page')}}">
+                  <li><i class="fa-solid fa-door-open"></i> تسجبل الخروج</li>
+              </a>
+          </ul>
+
+          </div>
+        </div>
+      
+        <ul class="main-nav">
+
+          <li class="hid"><a href="{{url_for('home_pages')}}"> <i
+            class="fa-solid fa-house-chimney"></i>الرئيسيه</a>
+</li>
+<li class="hid"> <a href="{{url_for('authors_page')}}"><i class="fa-sharp fa-solid fa-users"></i>مؤلفو
+        الكتب </a> </li>
+<li class="hid"><a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>اقسام
+        الكتب</a> </li>
+<li class="spec">
+
+            <a href="#" id="test"> <i class="fa-solid fa-bars"></i>القائمه</a>
+            <!-- Start megamanu     -->
+            <div class="menu" id="megaMenu">
+              <ul class="links">
+                <li>
+                    <a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>اقسام
+                        الكتب</a>
+                </li>
+
+                <li>
+                    <a href="{{url_for('authors_page')}}"><i class="fa-sharp fa-solid fa-users"></i>مؤلفو
+                        الكتب </a>
+                </li>
+
+                <li>
+                    <a href="{{url_for('quotations_page')}}"><i
+                            class="fa-solid fa-quote-left"></i>اقتباسات</a>
+                </li>
+                <li>
+                    <a href="{{url_for('Educated_community')}}"><i
+                            class="fa-solid fa-sociate-left"></i>مجتمع المثقفين</a>
+                </li>
+
+                <li>
+                    <a href="{{url_for('reviews_page')}}"><i class="fa-solid fa-star"></i>مراجعات</a>
+                </li>
+            </ul>
+
+
+            </div>
+            <!-- End megamanu     -->
+
+          </li>
+        </ul>
+        <a href="{{url_for('home_pages')}}" class="logo">المكتبه</a>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- header end -->
+
+  <main>
+
+
+    <div class="container" style=" margin-right: 105px;">
+
+
+      <div class="firstt">
+        <h1 style="text-align: right;">مؤلفو الكتب</h1>
+
+
+      </div>
+
+      <span style="color: #45b09e;font-size: 15px;display: inline-block; text-align: right;
+            padding-inline-start: 90%;     padding-left: 965px;">
+        268,136
+        مؤلف
+
+      </span>
+
+      <div class="wrap  ">
+        <div class="search">
+          <input type="text" class="searchTerm" placeholder="البحث عن مؤلف" style="text-align: right; height: 50px; ">
+          <button type="submit" class="searchButton" style="height: inherit;">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+
+
+
+      <div class="content">
+
+
+        <div class="cards">
+
+          <a href="../SWproject-4/SWproject/html/Educator_information.html" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img1.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">هو كلام الله عز وجل</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (1,454)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 106 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+
+          <a href="../SWproject-4/SWproject/html/Educator_information.html"
+            style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="../author_details/احمد خالد توفيق/images/image2.png">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">احمد خالد توفيق</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (472)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 58 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="../SWproject-4/SWproject/html/Educator information.html" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img3.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">محمد بن صالح العثيمين</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (1,503)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 150 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="../SWproject-4/SWproject/html/Educator_information.html" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img4.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">م. احمد سمير</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (1,784)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+        </div>
+
+
+        <div class="cards">
+
+          <a href="../SWproject-4/SWproject/html/Educator_information.html" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img5.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">علي محمد الصلابي</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img6.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">محمد متولي الشعراوي</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img7.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">اسلام جمال</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img8.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">ابراهيم الفقي</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+        </div>
+
+
+        <div class="cards">
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img9.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">مصطفى محمود</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img10.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">فهد عامر الأحمدي</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img11.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">ابن القيم الجوزية</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img12.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">أبو حامد الغزالي</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+        </div>
+
+
+        <div class="cards">
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img13.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">محمد إسماعيل البخاري</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img14.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">ابن تيمية</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img15.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">مصطفى العدوي</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/img16.jpeg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">ابن كثير</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+        </div>
+
+
+        <div class="cards">
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/17.png">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">نجيب محفوظ</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/18.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">روبرت سشنز ودورث</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/19.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">حسان بن ثابت</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/20.png  ">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">أحمد بن حنبل</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+        </div>
+
+
+        <div class="cards">
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/21.jpg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">مالك بن نبي</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/22.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">طه حسين</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/23.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">محمد على الصابونى</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/24.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">آلان دونو</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+        </div>
+
+
+        <div class="cards">
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/25.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">مصطفى المنفلوطي</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/26.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">عبد الغني المقدسي</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/27.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">مالك بن أنس</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/28.jpg">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">سامي عامري</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+        </div>
+
+
+        <div class="cards">
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/29.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">صالح الفوزان</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/30.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">احمد امين</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/31.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">أبو زكريا النووي</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+          <a href="#" style="text-decoration: none ; color: inherit;">
+
+            <div class="boxx" style="width: 220px; ">
+              <div class="image">
+                <img src="img/32.webp">
+              </div>
+              <div class="name_job" style="padding-bottom: 20px;">سليم حسن</div>
+              <hr style="width: 100%; ">
+
+              <div class="rating" style="padding-top:18px;">
+                (2,494)
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> 126 كتاب</p>
+
+
+
+            </div>
+          </a>
+          <div style="width: 30px;"></div>
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+
+    </div>
+
+
+
+    <div class="wrapper">
+
+      <div class="X " style=>
+        <link rel='stylesheet'
+          href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+
+        <ul class="SG" style="padding-top: 220px;">
+
+          <li class="sgLi">
+            <div class="list" style="padding-right: 20px; border-radius: 15px;">
+
+              <h3 style="padding-bottom:4px ; padding-top: 15px; "><i class="fa fa-search" aria-hidden="true"
+                  style="float: left; padding-left: 28px;"></i>أقسام الكتب </h3>
+              <hr>
+
+              <ul class="df" style=" list-style-type: none; ">
+
+
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px; padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>الروايات والقصص الأدبية</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>التنمية البشرية وتطوير الذات</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>الديانة الإسلامية</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>التاريخ</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>الفقه الإسلامي</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>الأدب</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>علم الفلسفة والمنطق</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>الثقافة</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>تفسير القرآن الكريم</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>علم النفس</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> الهندسة</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> المصاحف الشريفة</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> المعاجم والقواميس</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> التربية والتعليم</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> مقارنة أديان </p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>الفقه الإسلامي</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>الأدب</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>علم الفلسفة والمنطق</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>الثقافة</p>
+                </a>
+
+
+              </ul>
+            </div>
+          </li>
+
+
+
+          <div style="height: 40px;"></div>
+
+
+
+          <li class="sgLi">
+            <div class="list" style="padding-right: 20px; border-radius: 15px;">
+
+              <h3 style="padding-bottom:4px ; padding-top: 15px; "><i class="fa fa-search" aria-hidden="true"
+                  style="float: left; padding-left: 28px;"></i>مؤلفو الكتب</h3>
+              <hr>
+              <ul class="df" style=" list-style-type: none; ">
+
+
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>مصطفى محمود</p>
+                </a>
+
+                <a href="#" style=" color: black  ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>ابراهيم الفقي</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>احمد خالد توفيق</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>فهد عامر الأحمدي</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>هو كلام الله عز وجل</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>محمد متولي الشعراوي </p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>محمد بن صالح العثيمين</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>اجاثا كريستي</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>عباس العقاد</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i>علم النفس</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> عمر الحوراني</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> نجيب محفوظ</p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> أحمد خالد مصطفى </p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> جلال الدين السيوطى </p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> راغب السرجاني </p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> ابن تيمية </p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> عبد الرحمن بن خلدون </p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> ابراهيم السكران </p>
+                </a>
+                <a href="#" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> سيد قطب </p>
+                </a>
+
+
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+  </div>
+
+
+  <!-- footer Start  -->
+  <div style="height: 1550px; background-color:#f1f1f1 ;"></div>
+  <footer>
+    <div class="footer">
+      <div class="containerr">
+        <div class="box third">
+          <div class="adress">
+            <p> <i class="fa-solid fa-location-dot"></i>كليه الحاسبات و المعلومات جامعه الفيوم</p>
+          </div>
+          <div class="time">
+            <p>
+              <i class="fa-solid fa-clock"></i>
+              ساعات العمل : من 10:00 الي 18:00
+
+            </p>
+          </div>
+          <div class="phone">
+            <p><i class="fa-solid fa-phone"></i>
+              +20123456789</p>
+          </div>
+        </div>
+        <div class="box Second">
+          <ul>
+            <li>اقسام الكتب</li>
+            <li>المؤلفون</li>
+            <li>اقتباسات</li>
+            <li>مراجعات</li>
+            <li>مجتمع المثقفين</li>
+
+          </ul>
+        </div>
+
+        <div class="box first">
+          <h1>المكتبه</h1>
+          <div class="social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+          <p> مكتبة رقمية للكتب والروايات الإلكترونية العربية والعالمية تحتوي آلاف الكتب والروايات في جميع المجالات
+          </p>
+        </div>
+      </div>
+      <p class="rights">
+        <i class="fa-solid fa-copyright"></i>
+        <span>جامعه الفيوم</span>
+      </p>
+    </div>
+
+  </footer>
+  <!-- footer Ends  -->
+</body>
+<script src="/static/js/action.js"></script>
+
+
+</html>

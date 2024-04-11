@@ -1,0 +1,75 @@
+{% extends 'Home.html' %}
+
+{% block title %} manage_books {% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Admin Page</h2>
+        <ul>
+            <li><a href="{{url_for('admin_pages')}}" target="_blank"><i class="fas fa-home"></i>Home</a></li>
+            <li><a target="_blank" href="{{url_for('manage_user')}}"><i class="fas fa-user"></i>Manage user</a></li>
+            <li><a target="_blank" href="{{url_for('manage_books')}}"><i class="fas fa-user"></i>Manage Books</a></li>
+            <li><a href="{{url_for('manage_author')}}"><i class="fas fa-user"></i>Manage author</a>
+            </li>
+            <li><a target="_blank" href="{{url_for('home_pages')}}"><i class='fa fa-wpexplorer'></i> Noor library
+                    Website</a></li>
+            <li><a href="{{url_for('login_page')}}"><iconify-icon icon="bx:log-out" width="29"
+                        height="20"></iconify-icon>
+                    LOG OUT</a></li>
+        </ul>
+
+        <div class="social_media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="main_content">
+        <div class="header">Welcome!! Have a nice day.</div>
+        <div class="info">
+            <div class="container">
+                <div class="row">
+                    <a href="{{url_for('add_book')}}"> <button type="button" class="btn btn-primary">add book</button></a>
+                    <h1 class="he23">Manage Books</h1>
+                    <table class="table-latitude">
+                        <thead>
+                            <th>Book_id</th>
+                            <th>book name</th>
+                            <th>link</th>
+                            <th>rate</th>
+                            <th>book_date</th>
+                            <th>price</th>
+                            <th>author_id</th>
+                            <th>quantity_book</th>
+                            <th>edit</th>
+                            <th>update</th>
+                        </thead>
+                        <tbody>
+                            {% for row in data2 %}
+                            <tr>
+                                <td>{{row.Book_id}}</td>
+                                <th>{{row.book_name}}</th>
+                                <th>{{row.link}}</th>
+                                <td>{{row.rate}}</td>
+                                <td>{{row.book_date}}</td>
+                                <td>{{row.price}}</td>
+                                <td>{{row.author_id}}</td>
+                                <th>{{row.quantity_book}}</th>
+
+                                <td><a href="/updatebook/{{row.Book_id}}"><button class="button">Update</button></a>
+                                </td>
+                                <td><a href="/removebook/{{row.Book_id}}"><button
+                                            class="button-danger">Remove</button></a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+{% endblock %}

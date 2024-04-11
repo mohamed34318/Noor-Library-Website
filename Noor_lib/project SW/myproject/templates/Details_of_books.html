@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{url_for('static' , filename= 'css/normalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename= 'css/DetailsStyle.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename= 'css/all.min.css')}}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Work+Sans:ital,wght@0,200;0,500;0,600;0,700;0,800;1,200;1,400&display=swap"
+        rel="stylesheet">
+    <title>Details</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="settings">
+                <img class='avatar' src="/static/upload/images/avatar-05.png" alt="">
+                <div class="settingsMenu">
+                    <div class="settingsheader">
+                        <img src="/static/upload/images/avatar-05.png" alt="">
+                        <p>Mohamed Elagamy</p>
+                    </div>
+                    <ul class="info">
+                        <li style="color: #45b09e;"> <a href="{{url_for('user_informations')}}"
+                                style="color: #45b09e;"><i class="fa-solid fa-gear"></i>الاعدادات</a> </li>
+                        <a href="{{url_for('login_page')}}">
+                            <li><i class="fa-solid fa-door-open"></i> تسجبل الخروج</li>
+                        </a>
+                    </ul>
+
+                </div>
+            </div>
+            <ul class="main-nav">
+
+                <li class="hid"><a href="{{url_for('home_pages')}}"> <i
+                    class="fa-solid fa-house-chimney"></i>الرئيسيه</a>
+        </li>
+        <li class="hid"> <a href="{{url_for('authors_page')}}"><i class="fa-sharp fa-solid fa-users"></i>مؤلفو
+                الكتب </a> </li>
+        <li class="hid"><a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>اقسام
+                الكتب</a> </li>
+        <li class="spec">
+
+                    <a class="mainLink" href="#" id="test"> <i class="fa-solid fa-bars"></i>القائمه</a>
+                    <!-- Start megamanu     -->
+                    <div class="menu" id="megaMenu">
+
+                        <ul class="links">
+                            <li>
+                                <a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>اقسام
+                                    الكتب</a>
+                            </li>
+
+                            <li>
+                                <a href="{{url_for('authors_page')}}"><i class="fa-sharp fa-solid fa-users"></i>مؤلفو
+                                    الكتب </a>
+                            </li>
+
+                            <li>
+                                <a href="{{url_for('quotations_page')}}"><i
+                                        class="fa-solid fa-quote-left"></i>اقتباسات</a>
+                            </li>
+                            <!-- <li>
+                                <a href="{{url_for('Educated_community')}}"><i
+                                        class="fa-solid fa-sociate-left"></i>مجتمع المثقفين</a>
+                            </li>
+
+                            <li>
+                                <a href="{{url_for('reviews_page')}}"><i class="fa-solid fa-star"></i>مراجعات</a>
+                            </li> -->
+                        </ul>
+
+                    </div>
+                    <!-- End megamanu     -->
+
+                </li>
+            </ul>
+            <a href="{{url_for('home_pages')}}" class="logo"> <img src="/static/upload/images/main.svg" style="width: 60px;
+                margin: 20px auto;" alt="logo"></a>
+        </div>
+    </div>
+
+
+    <!-- content start  -->
+    <div class="content">
+        <div class="container">
+            <div class="sidebar">
+                <h3>اقسام الكتب</h3>
+                <ul>
+                    <li> <i class="fa-solid fa-book"></i>روايات و قصص</li>
+                    <li> <i class="fa-solid fa-book"></i> الفقه الاسلامي</li>
+                    <li> <i class="fa-solid fa-book"></i>الادب</li>
+                    <li> <i class="fa-solid fa-book"></i>علم النقس و المنطق</li>
+                    <li> <i class="fa-solid fa-book"></i>تاريخ</li>
+                    <li> <i class="fa-solid fa-book"></i>العقيده الاسلاميه</li>
+                    <li> <i class="fa-solid fa-book"></i>الهندسه</li>
+                </ul>
+
+            </div>
+            <div class="sub-container">
+
+                <div class="mainContent">
+
+                    <div class="bookDetails">
+                        <div class="image">
+                            <img src="{{url_for('static', filename='upload/images/'+rows.link)}}"  alt="">
+                        </div>
+                        <div class="info">
+                            <h3>فاتتي صلاه</h3>
+                            <div class="rate">
+                                {% for x in range(1 ,rows.rate) %}
+                                <i class="fa-sharp fa-solid fa-star"></i>
+                                {% endfor %}
+                            </div>
+                            <div class="data">
+
+                                <ul>
+                                    <li>{{rows.book_name}}</li>
+                                    <li>{{auth.name_author}}</li>
+                                    <li> العربيه</li>
+                                    <li>{{rows.book_date}}</li>
+                                    <li>{{rows.price}} $</li>
+                                    <li>مؤسسة زحمة كتاب للثقافة والنشر </li>
+                                   
+
+                                </ul>
+                                <ul class="label">
+                                    <li> :اسم الكتاب</li>
+                                    <li> :مؤلف</li>
+                                    <li> اللغة:</li>
+                                    <li> :التاريخ</li>
+                                    <li> :السعر</li>
+                                    <li> :مؤسسة</li>
+                                    
+                                </ul>
+                            </div>
+
+
+                            <div class="buy">
+                                <a href="{{url_for('purchase_cart')}}">
+                                    اشتري الان
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="authorDescription">
+                        <img src="{{url_for('static' ,filename='upload/images/'+auth.link_image)}}" alt="logo">
+                        <div class="authorinfo">
+                            <h2>{{auth.name_author}}</h2>
+                            <p>{{auth.Description}}</p>
+                        </div>
+                    </div>
+                    <div class="bookDescription">
+                        <h2>وصف الكتاب</h2>
+                        <p>{{rows.Description}}</p>
+                    </div>
+                    <div class="bookReview">
+                        <h2>مراجعات الكتاب</h2>
+                        <div class="box">
+                            <img src="/static/upload/images/avatar-02.png" alt="">
+                            <div class="reviewInfo">
+                                <h3>محمد العجمي</h3>
+                                <p>
+                                    كتاب جميل جدا جعله الله في ميزان حسنات الكاتب. و قد حفزني على المواظبة على الصلاة و
+                                    صلاة الفجر و قراءة القرآن. جزاك الله خيرا و أنصح بقراءته. فقط إذا كان بالإمكان تصحيح
+                                    مسألة حكاية عاشق و جعلها حكاية محب. لأن العشق يكون فيه شيئا من الشهوة. أما الحب فهو
+                                    جائز بين الله و عباده و رسوله. هي فقط ملاحظة شخصية.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img src="/static/upload/images/avatar-03.png" alt="">
+                            <div class="reviewInfo">
+                                <h3>محمد روبي</h3>
+                                <p>كتاب لا يوصف بالكلمات اروع من الرائع و غني بالمعلومات و القصص التي تقرب العبد من ربه و
+                                    تجعله متشوقا للقاءه
+                                    تحدث عن الصلاة و كيف تساهم في تغيير حياتنا و شخصياتنا و نظرتنا للاشياء فجعل قلوبنا
+                                    تحن اليها
+                                    كتاب انصح بقراءته بشدة
+                                    اللهم ثبتنا على الصلاة و اجعل عمل الكاتب هذا في ميزان حسناته</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quotes">
+                        <h3>اقتباسات من الكتاب</h3>
+                        <div class="quoteCon">
+                            <p>
+                                <i class="fa-solid fa-quote-left"></i>
+                                العبرة بمن هو أحسن عملا لا بمن هو أكثر عمالا
+                                <i class="fa-solid fa-quote-right"></i>
+                            </p>
+
+
+                            <ul>
+                                <li> <i class="fa-solid fa-thumbs-up"></i> 86</li>
+                                <li><i class="fa-solid fa-thumbs-down"></i> 4</li>
+                                <li> <i class="fa-solid fa-comments"></i> 2</li>
+                            </ul>
+
+
+                        </div>
+                        <div class="quoteCon">
+                            <p>
+                                <i class="fa-solid fa-quote-left"></i>
+                                !وإن كان اللهُ معك فمن عليك
+                                <i class="fa-solid fa-quote-right"></i>
+                            </p>
+
+
+                            <ul>
+                                <li> <i class="fa-solid fa-thumbs-up"></i> 206</li>
+                                <li><i class="fa-solid fa-thumbs-down"></i> 0</li>
+                                <li> <i class="fa-solid fa-comments"></i> 198</li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content Ends  -->
+
+    <!-- FOOTER START -->
+    <div class="footer">
+        <div class="container">
+            <div class="box third">
+                <div class="adress">
+                    <p> <i class="fa-solid fa-location-dot"></i>كليه الحاسبات و المعلومات جامعه الفيوم</p>
+                </div>
+                <div class="time">
+                    <p>
+                        <i class="fa-solid fa-clock"></i>
+                        ساعات العمل : من 10:00 الي 18:00 
+                        
+                    </p>
+                </div>
+                <div class="phone">
+                    <p><i class="fa-solid fa-phone"></i>
+                        +20123456789</p>
+                </div>
+            </div>
+            <div class="box Second">
+                <ul>
+                    <li>اقسام الكتب</li>
+                    <li>المؤلفون</li>
+                    <li>اقتباسات</li>
+                    <li>مراجعات</li>
+                    <li>مجتمع المثقفين</li>
+
+                </ul>
+            </div>
+          
+            <div class="box first">
+                <h1>المكتبه</h1>
+                <div class="social">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <p> مكتبة رقمية للكتب والروايات الإلكترونية العربية والعالمية تحتوي آلاف الكتب والروايات في جميع المجالات
+                </p>
+            </div>
+        </div>
+        <p class="rights">
+            <i class="fa-solid fa-copyright"></i>
+            <span>جامعه الفيوم</span>
+        </p>
+    </div>
+
+    <!-- FOOTER END -->
+    <script src="/static/js/action.js"></script>
+</body>
+
+</html>

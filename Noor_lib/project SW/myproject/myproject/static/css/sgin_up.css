@@ -1,0 +1,515 @@
+
+body{
+    
+    background-image:linear-gradient(to bottom,rgb(31, 131, 131) , #45b09e) ;
+font-family:system-ui;
+    height:1000;
+}
+.or{
+    background-color: #3f51b5;
+    margin: 5px auto 4px auto!important;
+}
+
+
+.form1,.form2{
+    display: flex;
+    flex-direction: column;
+  justify-content: space-around ;
+    width: 45%;
+    height: 900px;
+    margin-left: 25%;
+    margin-top:50px ;
+    margin-bottom: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 9px rgb(79 90 86);
+}
+.form2{
+    height: 700px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+        margin-top: 39px!important;
+    margin-bottom: 90px!important;
+
+}
+.form2 .sgin-up{
+    height: 7%!important;
+}
+.select{
+    height: 4%;
+    display: grid;
+
+    width: 100%;
+    margin:0 auto;
+
+}
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  width: 50%;
+  margin:0 auto 0 auto;
+  text-align: center;
+  font-size: 20px;
+  
+}
+.select .custom-select{
+     position: relative;
+  font-family: Arial;
+  width: 20%;
+  margin:0 auto 0 auto;
+  text-align: center;
+  font-size: 15px; 
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+   background-image: linear-gradient(360deg, #d9dfe391, rgb(249, 243, 243));
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: -7px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: hwb(190 14% 31%) transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent hwb(190 14% 31%) transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+    font-family: system-ui;
+    color: hwb(190 14% 31%);
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: rgb( 0, 0, 0);
+    cursor: pointer;
+    background-image: linear-gradient(360deg, #d9dfe391, rgb(249, 243, 243));
+    user-select: none;
+    border-radius: 4px;
+    margin: 0px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.select-items {
+    position: absolute;
+    background-image: linear-gradient(360deg, #d9dfe391, rgb(249, 243, 243));
+    /* top: 100%; */
+    left: 0;
+    right: 0;
+    
+    z-index: 99;
+    
+}
+/*style items (options):*/
+.select .select-items {
+    position: absolute;
+    background-color: rgb(209 213 212);
+    
+    left: -10px;
+    overflow-y: scroll;
+    z-index: 99;
+    width: 100%;
+    height: 310px;
+    
+    border-color: #121211!important;
+    padding-left: 10px;
+    padding-right: 11px;
+}
+
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+background-image: linear-gradient(360deg, rgb(24, 202, 199), rgb(24, 202, 199));
+  color: #ffffff;
+}
+.select {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 2%;
+   width: 75%;
+    font-size: 30px;
+    padding-bottom: 20px;
+
+    
+}
+.sgin-up {
+        width: 25%;
+    text-align: center;
+    background-color: hwb(183deg 13% 20%);
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0px!important;
+    margin-left: calc(37.5% - 1px);
+    border-radius: 2px;
+    cursor: pointer;
+    border: 1px rgb(24, 202, 199) solid;
+    height: 45px;
+
+}
+.form2 .sgin-up{
+height: 5%;
+width: 30%;
+margin-left: auto;
+margin-right: auto;
+}
+.form2 input{
+    height: 3%;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px black solid;
+    height: 2%;
+    width: 75%;
+    font-size: 20px;
+    text-align: end;
+    background-image: linear-gradient(360deg, #d9dfe391, rgb(249, 243, 243));
+    color: rgb(24, 202, 199);
+    padding: 10px;
+    margin: 0px auto;
+    outline-color:#93f2ff ;
+    border: 1px #0592b6 solid;
+    
+    
+}
+input:focus{
+    background-image: linear-gradient(360deg, rgb(178, 222, 221), rgb(178, 222, 221));
+}
+input:focus::placeholder{
+    color: rgb(24, 202, 199);
+}
+input::placeholder{
+    color: hwb(183deg 13% 20%);
+}
+.form2 h2{
+    font-size: 30px;
+}
+h2 {
+    text-align: center;
+    color: hwb(183deg 13% 20%);
+    font: size 25px;;
+margin-bottom: 0;
+}
+.form2 h3{
+    font-size: 25px;
+}
+h3 {
+    text-align: center;
+    margin-top: 2px;
+    padding: 3px 3px 3px 3px;
+    font-size: 20px;
+    color: hwb(190 14% 31%);
+}
+img {
+    width: 20px;
+    margin:auto auto;
+}
+select{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 20%;
+    text-align: center;
+    color: rgb(34, 72, 121);
+    font-size: 20px;
+    outline-color: #1356bf;
+    
+}
+
+h4 {
+    color: #0c9792;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+   
+}
+
+a ,.a{
+    background-color: #57bec140;
+
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    border-radius: 8px;
+    
+}
+
+.select option{
+    background-color: #86ffeb;
+    font-size: 20px;
+  
+}
+
+ select option:hover{
+    background-color: #1356bf!important;
+}
+.a:hover{
+    color: #3f51b5!important;
+    text-decoration: underline!important;
+}
+a:hover{
+    background-color: aqua;
+}
+.sgin{
+  
+    width: 25% !important;
+    text-align: center;
+    display: flex;
+    margin: 60px auto 0px auto;
+    height: 30px;
+    justify-content: center;
+    border: 1px rgb(24, 202, 199) solid;
+        text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+}
+
+.form2 p{
+    font-size: 24px;
+}
+p {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+   font-weight: bold;
+    margin-top: -21px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
+    color: #636361;
+    border-radius: 70%;
+}
+.sgin-up:hover{
+    background-image: linear-gradient(360deg, #73fbfd, #73fbfd)!important;
+    color: rgb(10, 116, 141);
+    border-color: rgb(24, 202, 199);
+}
+.sgin:hover{
+    background-color: #73fbfd !important;
+    color: rgb(10, 116, 141);
+}
+.visa{
+    display: flex;
+    margin: 0 auto;
+    width: 75%;
+}
+.visa input{
+    width: 60%;
+    height: 13px;
+    text-align: start;
+}
+ @media(max-width:1230px){
+    .form1{
+        width: 60%;
+        margin: auto;
+    }
+    .form2{
+        width: 60%;
+        margin: auto;
+    }
+}
+@media (max-width:500px) {
+    .form1{
+        padding-bottom: 20px;
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        height: 750px;
+
+
+
+    }
+    .form2{
+        padding-bottom: 20px;
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        height: 600px;
+    }
+    input{
+        height:1% ;
+        margin-bottom: 7px;
+    }
+    h2{
+        font-size: 22px;
+font-weight: bold;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .select{
+        width: 100%;
+        font-size: 1px;
+        
+    }
+    h4{
+        font-size: 15px;
+    }
+    .sgin-up{
+        text-align: center;
+        font-size: 14px;
+        width: 30%;
+        
+        margin: 0px auto 0px auto;
+    }
+    .sgin{
+        font-size: 15px;
+    }
+    
+    .or{
+        
+        width: 70%;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p{
+        padding: 0px;
+        margin-top: 12px;
+    }
+    .select{
+        height: 3%;
+        width: 80%!important;
+    }
+    select{
+        width: 60%!important;
+        
+    }
+    .form2 p{
+        margin-top: -12px;
+    }
+    
+    
+}
+@media  (max-width: 899px) and (min-width: 500px){
+    .form1{
+       
+        width: 90%;
+       margin:auto;
+
+
+    }
+    .form2{
+       
+        width: 90%;
+        margin:auto;
+    }
+    input{
+        height: 1.33%;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    input::placeholder{
+        font-size: 19px;
+    }
+
+    
+    
+}
+
+@media  (max-width: 800px)
+{
+  .select-items div, .select-selected{
+font-size: 15px;
+  }
+   .select .select-items div, .select-selected{
+font-size: 13px;
+padding-left: 0;
+margin: 0;
+  }
+  .select-selected:after{
+    right: 2px;
+  }
+  }
+  @media  (max-width: 580px)
+{
+  .select-items div, .select-selected{
+font-size: 10px;
+  }
+  input::placeholder{
+    font-size: 15px;
+  }
+  .select {
+    height: 3%;
+    width: 75%;
+    margin: 0;
+margin-left: auto;
+margin-right: auto;
+    border: 0;
+    padding: 0;
+}
+   .select .select-items div, .select-selected{
+font-size: 10px;
+padding-left: 0;
+padding-right:4px;
+margin: 0;
+width: 100%;
+  }
+  .select-selected:after{
+    top:12px
+  }
+  .select .select-selected:after{
+    top:12px;
+    right: -6px;
+  }
+  p{
+    font-size: 15px;
+  }
+  }
+ 
+    
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }

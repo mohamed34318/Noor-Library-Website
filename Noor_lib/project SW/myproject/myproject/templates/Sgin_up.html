@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sgin up</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Sgin_up.css') }}">
+</head>
+<body>
+ <form method="POST">
+  <div class="form1">
+    <img src="/static/upload/images/open-book.png" alt="" style="margin: 10px auto;">
+    <h2>انشاء حساب</h2>
+  <h3>مكتبة غير محدودة من الكتب العربية والعالمية</h3>
+    <input type="text" placeholder="الاسم" name="customer_name" required>
+    <input type="email" name="email" placeholder="الايميل" required>
+    <input type="text" name="country" placeholder="الدولة" required>
+    <input type="text" name="age" placeholder="العمر" required>
+    <input type="password" name="password_user" placeholder="كلمة المرور" required>
+
+    <section style="    display: flex;flex-direction: row;justify-content: space-evenly;flex-wrap: nowrap;width: 75%;margin-left: auto;margin-right: auto;">
+    
+      <p class="custom-select">
+    <select  name="gender" class="sel" style="width: 400px;height:40px;" id="" required >
+            <option value>اختر النوع</option>
+            <option value="Male" >ذكر</option>
+            <option value="Famle">انثي</option>
+            {% if value==Male %}
+              return true
+            {% else %}
+            return false
+            {% endif %}
+    </select>
+    </p>
+    <h4>النوع</h4>
+    </section>
+    
+    <span class="select">
+      
+        <p class="custom-select">
+        <select name="year" id="" required>
+            <option value>اختر السنة</option>
+            <option value="1985">١٩٨٥</option>
+            <option value="1986">١٩٨٦</option>
+            <option value="1987">١٩٨٧</option>
+            <option value="1988">١٩٨٨</option>
+            <option value="1989">١٩٨٩</option>
+            <option value="1990">١٩٩٠</option>
+            <option value="1991">١٩٩١</option>
+            <option value="1992">١٩٩٢</option>
+            <option value="1993">١٩٩٣</option>
+            <option value="1994">١٩٩٤</option>
+            <option value="1995">١٩٩٥</option>
+            <option value="1996">١٩٩٦</option>
+            <option value="1997">١٩٩٧</option>
+            <option value="1998">١٩٩٨</option>
+            <option value="1999">١٩٩٩</option>
+            <option value="2000">٢٠٠٠</option>
+            <option value="2001">٢٠٠١</option>
+            <option value="2002">٢٠٠٢</option>
+            <option value="2003">٢٠٠٣</option>
+            <option value="2004">٢٠٠٤</option>
+            <option value="2005">٢٠٠٥</option>
+            <option value="206">٢٠٠٦</option>
+            <option value="2007">٢٠٠٧</option>
+            <option value="2008">٢٠٠٨</option>
+            <option value="2009">٢٠٠٩</option>
+            <option value="2010">٢٠١٠</option>
+            <option value="2011">٢٠١١</option>
+            <option value="2012">٢٠١٢</option>
+            <option value="2013">٢٠١٣</option>
+            <option value="2014">١٠١٤</option>
+            </select>
+        </p>
+        <p class="custom-select">
+        </select>
+          <select name="month"  required>
+            <option value>اختر الشهر</option>
+            <option value="January">يناير</option>
+            <option value="Februay">فبراير</option>
+            <option value="March">مارس</option>
+            <option value="April">ابريل</option>
+            <option value="May">مايو</option>
+            <option value="June">يونيه</option>
+            <option value="July">يوليو</option>
+            <option value="August">اغسطس</option>
+            <option value="September">سبتمبر</option>
+            <option value="October">اكتوبر</option>
+            <option value="November">نوفمبر</option>
+            <option value="December">ديسمبر</option>
+
+          </select>
+          </p>
+      <p class="custom-select">
+        <select lebal="ddd" name="day"  required>
+                      <option value>اختر اليوم</option>
+            <option value="1">١</option>
+
+            <option value="2">٢</option>
+            <option value="3">٣</option>
+            <option value="4">٤</option>
+            <option value="5">٥</option>
+            <option value="6">٦</option>
+            <option value="7">٧</option>
+            <option value="8">٨</option>
+            <option value="9">٩</option>
+            <option value="10">١٠</option>
+            <option value="11">١١</option>
+            <option value="12">١٢</option>
+            <option value="13">١٣</option>
+            <option value="14">١٤</option>
+            <option value="15">١٥</option>
+            <option value="16">١٦</option>
+            <option value="17">١٧</option>
+            <option value="18">١٨</option>
+            <option value="19">١٩</option>
+            <option value="20">٢٠</option>
+            <option value="21">٢١</option>
+            <option value="22">٢٢</option>
+            <option value="23">٢٣</option>
+            <option value="24">٢٤</option>
+            <option value="25">٢٥</option>
+            <option value="26">٢٦</option>
+            <option value="27">٢٧</option>
+            <option value="28">٢٨</option>
+            <option value="29">٢٩</option>
+            <option value="30">٣٠</option>
+            <option value="31">٣١</option>
+
+
+        </select>
+        <h4>تاريخ الميلاد</h4>
+      </p>
+      </span>
+      <span class="visa">
+     <input type="text" maxlength="15" minlength="15" name="num_visa" placeholder="1111 2222 3333 4444" required>
+     <h4>   رقم الفيزا</h4>
+     </span>
+
+      <span class="visa">
+     <input type="password" maxlength="3" minlength="3" name="cvv" placeholder="123" style="text-decoration: ltr !important;" required>
+     <h4> الرقم السري</h4>
+     </span>
+
+     <span class="visa"> 
+   
+     <input type="text" name="visa_date" placeholder="تاريخ الانتهاء">    
+     <h4>تاريخ الانتهاء</h4>
+     
+      </span> 
+    <input type="submit" class="sgin-up"  style="background-image:linear-gradient(to top,hwb(183deg 13% 20%),hwb(183deg 13% 20%)) ;" value="انشاء حساب">
+      <div style="display:flex;flex-direction: row  !important;">
+        
+        <p style="width:50%">  هل لديك حساب بالفعل؟<a href="{{ url_for('login_page') }}" class="a" style="background-color: white;color:rgb(51, 23, 175);text-decoration:none;">  تسجيل الدخول </a></p>
+        
+      </div>
+    
+    <span class="select" style="width:150px;margin:0px auto 0px auto;">
+      <a href="">
+        <img src="{{ url_for('static',filename='upload/images/facebook.png') }}" alt="">
+      </a>
+      <a href="">
+        <img src="{{ url_for('static',filename='upload/images/twitter.png') }}" alt="">
+        <a href="">
+        <img src="{{ url_for('static',filename='upload/images/instagram.png') }}" alt="">
+      </a>
+      </a>
+    </span>
+  </div>
+  </form>
+  <script src="{{ url_for('static',filename='js/sginup.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../css/normacss">
+    <link rel="stylesheet" href="../css/Bookreiews.css">
+    <link rel="stylesheet" href="../css/all.min.css"> -->
+    <!-- ****************************** -->
+    <link rel="stylesheet" href="{{url_for('static' , filename= 'css/normalize_page_sections_quotations.css')}}">
+    <link rel="stylesheet"
+        href="{{url_for('static' , filename= 'css/Bookreiews_Book_Reiews_Educated_community_Educator_info.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename= 'css/all.min_Book_Reiews_Educator_info.css')}}">
+    <!-- ************************************************ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Work+Sans:ital,wght@0,200;0,500;0,600;0,700;0,800;1,200;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <div id="container">
+
+            <div id="settings">
+                <img id='avatar' src="/static/upload/images/avatar-05.png" alt="">
+                <div id="settingsMenu">
+                    <div class="settingsheader">
+                        <img src="/static/upload/images/avatar-05.png" alt="">
+                        <p>Mohamed Elagamy</p>
+                    </div>
+                    <ul class="info">
+                        <li style="color: #45b09e;"> <a href="{{url_for('user_informations')}}"
+                                style="color: #45b09e;"><i class="fa-solid fa-gear"></i>الاعدادات</a> </li>
+                        <a href="{{url_for('login_page')}}">
+                            <li><i class="fa-solid fa-door-open"></i> تسجبل الخروج</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div id="hide">
+
+                <a href="#"> <i class="fa-solid fa-bars"></i></a>
+            </div>
+            <ul id="main-nav">
+                <li class="hid"><a href="{{url_for('home_pages')}}"> <i
+                            class="fa-solid fa-house-chimney"></i>الرئيسيه</a>
+                </li>
+                <li class="hid"> <a href="{{url_for('authors_page')}}"><i class="fa-sharp fa-solid fa-users"></i>مؤلفو
+                        الكتب </a> </li>
+                <li class="hid"><a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>اقسام
+                        الكتب</a> </li>
+
+                <li class="spec">
+
+                    <a class="mainLink" href="#" id="test"> <i class="fa-solid fa-bars"></i>القائمه</a>
+                    <!-- Start megamanu     -->
+                    <div class="menu" id="megaMenu">
+
+                        <ul class="links">
+                            <li>
+                                <a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>اقسام
+                                    الكتب</a>
+                            </li>
+
+                            <li>
+                                <a href="{{url_for('authors_page')}}"><i class="fa-sharp fa-solid fa-users"></i>مؤلفو
+                                    الكتب </a>
+                            </li>
+
+                            <li>
+                                <a href="{{url_for('quotations_page')}}"><i
+                                        class="fa-solid fa-quote-left"></i>اقتباسات</a>
+                            </li>
+                            <!-- <li>
+                                <a href="{{url_for('Educated_community')}}"><i
+                                        class="fa-solid fa-sociate-left"></i>مجتمع المثقفين</a>
+                            </li>
+
+                            <li>
+                                <a href="{{url_for('reviews_page')}}"><i class="fa-solid fa-star"></i>مراجعات</a>
+                            </li> -->
+                        </ul>
+
+                    </div>
+                    <!-- End megamanu     -->
+
+                </li>
+            </ul>
+            <a href="{{url_for('home_pages')}}" class="logo"> <img src="/static/upload/images/main.svg" style="width: 60px;
+                margin: 20px auto;" alt="logo"></a>
+        </div>
+    </div>
+
+
+
+    <div class="addComment"></div>
+    <div class="List" style="display: flex;">
+
+        <div class="list1" style="padding-right: 20px; border-radius: 15px;margin:30px;background:#ffffff">
+
+            <h3 style="padding-bottom:4px ; padding-top: 15px; "><i class="fa fa-search" aria-hidden="true"
+                    style="float: left; padding-left: 28px;"></i>أقسام الكتب </h3>
+            <hr>
+
+            <ul class="df" style=" list-style-type: none; ">
+
+
+                {% for sec in data1 %}
+                <a href="{{url_for('sections_page')}}" style=" color: black; ">
+                    <p style="height:21px; padding-bottom: 30px;"><i class="fa fa-book"
+                            style=" float: left;   color: #45b09e;"></i>{{re.part_sections}}</p>
+                </a>
+                {% endfor %}
+
+
+            </ul>
+        </div>
+        <div id="div-container">
+            '<div class="comment"><a href="'book name'" class="book-name">' Book name '<img src="/static/upload/images/book.png" alt="logo"
+                        style="width: 20px"></a>
+                <div class="content">
+                    <div class="data" style="text-duration:rtl"><a href="'../html/FF.html'" class="user-name">User name</a><br><span
+                            class="rate">'Rate of the Book'</span>
+                        <p>Text of the cooment</p>
+                    </div>
+                    <div class="img" style="justify-content: end;" jac><img class="user" src="'../img/avatar-05.png" alt=""
+                            style="width: 40px;"></div>
+                </div>;
+            </div>
+        </div>
+
+
+
+
+
+        <!-- footer Start  -->
+
+        <div class="footer">
+            <div class="container">
+                <div class="box third">
+                    <div class="adress">
+                        <p> <i class="fa-solid fa-location-dot"></i>كليه الحاسبات و المعلومات جامعه الفيوم</p>
+                    </div>
+                    <div class="time">
+                        <p>
+                            <i class="fa-solid fa-clock"></i>
+                            ساعات العمل : من 10:00 الي 18:00
+
+                        </p>
+                    </div>
+                    <div class="phone">
+                        <p><i class="fa-solid fa-phone"></i>
+                            +20123456789</p>
+                    </div>
+                </div>
+                <div class="box Second">
+                    <ul>
+                        <li>اقسام الكتب</li>
+                        <li>المؤلفون</li>
+                        <li>اقتباسات</li>
+                        <li>مراجعات</li>
+                        <li>مجتمع المثقفين</li>
+
+                    </ul>
+                </div>
+
+                <div class="box first">
+                    <h1>المكتبه</h1>
+                    <div class="social">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <p> مكتبة رقمية للكتب والروايات الإلكترونية العربية والعالمية تحتوي آلاف الكتب والروايات في جميع
+                        المجالات
+                    </p>
+                </div>
+            </div>
+            <p class="rights">
+                <i class="fa-solid fa-copyright"></i>
+                <span>جامعه الفيوم</span>
+            </p>
+        </div>
+        <!-- footer Ends  -->
+        <script src="/static/js/BookReveiws_book_reviews.js"></script>
+        <script src="/static/js/action.js"></script>
+
+</body>
+
+</html>

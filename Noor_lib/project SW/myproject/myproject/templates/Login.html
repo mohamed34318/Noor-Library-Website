@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- <link rel="stylesheet" href="..//css/sgin up.css">      -->
+    <link rel="stylesheet" href="{{url_for('static' , filename= 'css/sgin_up.css')}}">
+</head>
+<body>
+ <form method="POST">
+   <div class="form2">
+    <img src="/static/upload/images/open-book.png" alt="" style="margin: 10px auto;">
+    <h2>تسجيل الدخول</h2>
+    <h3>مكتبة غير محدودة من الكتب العربية والعالمية</h3>
+   
+    <input type="email" name="email_user" placeholder="الايميل" required>
+    <input type="password" name="password_user" placeholder="كلمة المرور" required>
+
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      {{msg}}
+    </div>
+    <input type="submit" style="background-image:linear-gradient(to top,hwb(183deg 13% 20%),hwb(183deg 13% 20%)) ;" class="sgin-up" value="تسجيل الدخول" >
+     <div class="or" style="background-color
+     :#7c7c7c;width:60%;height:2px;justify-content:center;box-shadow:none;margin:15px auto 15px auto !important;">
+        <p>أو</p>
+
+     </div>
+     <a class="sgin" style="width: 30px; text-align:center;display:block;background-color:hwb(183deg 13% 20%); width: 30% !important;;margin:0px auto 0px auto;" href="{{url_for('register')}}">انشاء حساب</a> 
+    <span class="select" style="width:150px;margin:6px auto 0px auto;padding-top: 45px;">
+      <a href="">
+        <img src="/static/upload/images/facebook.png" alt="">
+      </a>
+      <a href="">
+        <img src="/static/upload/images/twitter.png" alt="">
+        <a href="">
+        <img src="/static/upload/images/instagram.png" alt="">
+      </a>
+      </a>
+    </span>
+   </div>
+   </form>
+   <script src="/static/js/sginup.js"></script>
+</body>
+</html>

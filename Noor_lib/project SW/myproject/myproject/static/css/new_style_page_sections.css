@@ -1,0 +1,349 @@
+/*اقس___________ام*/
+*{
+   margin: 0;
+   padding: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+} 
+:root {
+   --main-color: #45b09e;
+   --main-color-alt: #326d6cde;
+   --main-transition: 0.3s;
+   --main-padding-top: 100px;
+   --main-padding-bottom: 100px;
+}
+
+
+html {
+   scroll-behavior: smooth;
+}
+ul {
+   list-style: none;
+}
+
+.container {
+   padding-right: 30px;
+   padding-left: 30px;
+   margin-right: auto;
+   margin-left: auto;
+}
+body {
+   position: relative;
+   min-height: 100vh;
+   background-color: #f3f3f3;
+   color: rgb(0, 0, 0)!important;
+   font-size: 16px;
+   padding: 0!important;
+   margin: 0!important;
+   font-family: 'Noto Kufi Arabic','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+   line-height: 1.84;
+}
+:after, :before {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+.main{
+   direction: rtl;
+   margin: 0;
+   font-size: 15px;
+   font-family: 'Noto Naskh Arabic','Helvetica Neue',Helvetica,Arial,sans-serif;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: block;
+   line-height: 2.2;
+}
+a{
+   color: #317d71;
+   transition: all ease-in-out .2s;
+   text-decoration: none;
+   padding: auto;
+   background-color: transparent;
+}
+a:focus,a:hover {
+   color: #317d71;
+   text-decoration: underline
+}
+/* search*/
+h1{
+   direction: rtl;
+   color: rgb(0, 0, 0);
+   font-size: 40px;
+   position: relative;
+}
+.search{
+   padding: 10px 5px;
+   margin: 10px 5px;
+   width: max-content;
+   overflow: hidden;
+   margin-bottom: 30px;
+}
+button{
+   border: 0px solid gray;
+   cursor: pointer;
+   background-color: #9f171700;
+}
+button i{
+   height: 20px;
+   width: 25px;
+   color: rgb(63, 21, 21);
+   margin-right: 7px;
+}
+input{
+   height: 35px;
+   margin-left: 5px;
+   border: none;
+   text-align: center;
+   /*width: 0px;
+   transition: width 0.5s;
+    */
+}
+input
+/*box*/
+h2{
+   margin: 0;
+   font-size: 14px;
+   font-weight: bold;
+   margin-bottom: 10px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: block;
+   line-height: 2.2;
+   font-family: 'Noto Kufi Arabic','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.box {
+   padding: 30px;
+   background: #fff;
+   border-radius: 25px;
+   margin-bottom: 20px;
+   border: 1px solid #000000;
+   position: relative;
+   overflow: hidden;
+}
+.row{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+.row:before ,.row:after{
+   display: table;
+   content: " ";
+   clear: both;
+}
+.main h3{
+   margin: 9px;
+   font-size: 15px;
+   font-family: 'Noto Naskh Arabic','Helvetica Neue',Helvetica,Arial,sans-serif;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: block;
+   line-height: 2.2;
+   width: 50%;
+   position: relative;
+   min-height: 1px;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+.main h3:hover {
+   background: #e7e0e0;
+   border-radius: 29px;
+   font-weight: bold;
+   width: max-content;
+}
+/*Footer*/
+.footer {
+   background: #fff;
+   width: 100%;
+   border-top: 1px solid #dadde1;
+   padding: 20px;
+   text-align: center;
+   bottom: 0;
+}
+.m-t-30 {
+   margin-top: 37px!important;
+}
+.m-t-10 {
+   margin-top: 10px!important;
+}
+p{
+   margin: 0 0 10px;
+}
+.add_app_btn {
+   width: 290px;
+   margin: 15px auto 25px auto;
+   background: #f1f1f1;
+   padding: 20px;
+   border-radius: 50px;
+   color: #45b09e;
+   border: 1px solid #ddd;
+}
+.pointer {
+   cursor: pointer;
+}
+
+.text-center {
+   text-align: center;
+}
+
+.add_app_btn .add_app_text {
+   font-size: 18px;
+   font-weight: 700;
+   margin-top: 20px;
+   line-height: 1;
+}
+#backdrop {
+   filter: alpha(opacity=50);
+   opacity: .5;
+   z-index: 1101!important;
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-color: #000
+}
+
+.backdrop-index {
+   z-index: 1102!important;
+   position: relative
+}
+
+ul.typeahead {
+   border-radius: 15px
+}
+
+ul.typeahead li a {
+   font-size: 18px!important;
+   padding: 5px 15px!important
+}
+
+.books_s {
+   position: absolute;
+   z-index: 1;
+   color: #fff;
+   font-size: 11px;
+   font-family: 'Noto Naskh Arabic';
+   font-size: 12px;
+   left: -1px;
+   top: -2px;
+   font-weight: bold;
+   padding: 0 6px 0 3px;
+   border-top-left-radius: 6px;
+   border-bottom-right-radius: 15px
+}
+/*book reslut*/
+.book_result {
+   margin-top: 40px;
+}
+.colum{
+   position: relative;
+   min-height: 1px;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+.result{
+   padding-left: 15px!important;
+   padding-right: 15px!important;
+   margin-bottom: 30px!important;
+   float: right;
+   width: 100%;
+   position: relative;
+   min-height: 1px;
+}
+.single-quote {
+   font-size: 18px;
+   border: 1px solid #dadde1;
+   border-radius: 4px;
+   overflow: hidden;
+   background: #fff;
+}
+.quote-content {
+   color: #000000;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+.quote-content-child {
+   line-height: 1.7;
+   font-size: 20px;
+   background-color: rgba(255,255,255,.65);
+   padding: 10px;
+   border-radius: 4px;
+}
+.opacity_background_quote {
+   background-color: rgba(255,255,255,.9);
+   padding: 10px;
+}
+.text-center {
+   text-align: center;
+}
+.quote-content i.fa-quote-left, .quote-content i.fa-quote-right {
+   color: #45b09e;
+}
+.fa-flip-horizontal {
+   -webkit-transform: scale(-1,1);
+   -ms-transform: scale(-1,1);
+   transform: scale(-1,1);
+}
+:root .fa-flip-horizontal{
+   filter: none;
+}
+.fa {
+   display: inline-block;
+   font: normal normal normal 14px/1 FontAwesome;
+   font-size: inherit;
+   text-rendering: auto;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+.quote_bottom_btns {
+   border-top: 1px solid #f1f1f1;
+}
+.quote_bottom_btns a:hover {
+   text-decoration: none;
+   background: #ceece7;
+}
+.quote_bottom_btns .quote_adder {
+   border-right: 1px solid #f1f1f1;
+   padding: 8px 15px;
+   display: block;
+   height: 47px;
+   max-width: 150px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.quote_bottom_btns .quote_book_title {
+   padding: 8px 15px;
+   display: block;
+   height: 47px;
+   max-width: 300px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: flex;
+}
+.pull-right {
+   float: right!important;
+}
+.pull-left {
+   float: left!important;
+}
+i.fa.fa-book {
+   display: block;
+   /*margin: 10px;*/
+}
+img {
+   vertical-align: middle;
+   border: 0;
+}
+.img-circle {
+   border-radius: 50%;
+}
+.quote_bottom_btns .quote_book_title i, .quote_bottom_btns .quote_book_title span {
+   align-self: center;
+}

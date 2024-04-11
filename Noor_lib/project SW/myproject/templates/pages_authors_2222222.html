@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- ***************************************** -->
+  <link rel="stylesheet" href="{{url_for('static' , filename='css/DetailsStyle_authors_Details.css')}}">
+  <link rel="stylesheet" href="{{url_for('static' , filename='css/all.min_authors_Detail.css')}}">
+  <link rel="stylesheet" href="{{url_for('static' , filename='css/normalize_authors_Details.css')}}">
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'css/normalize.css')}}">
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'css/DetailsStyle.css')}}">
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'css/all.min.css')}}">
+
+  <!-- ******************************************************************** -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Work+Sans:ital,wght@0,200;0,500;0,600;0,700;0,800;1,200;1,400&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'css/normalize_pages_authors.css')}}">
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'css/style_pages_authors.css')}}">
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'css/all.min_pages_authors')}}">
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'css/code_pages_authors')}}">
+
+  <!-- ***************************************** -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Work+Sans:ital,wght@0,200;0,500;0,600;0,700;0,800;1,200;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+
+
+  <title>MainPage</title>
+
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="containerr">
+        <div class="settings">
+          <img class='avatar' src="/static/images/avatar-05.png" alt="">
+          <div class="settingsMenu">
+            <div class="settingsheader">
+              <img src="/static/images/avatar-05.png" alt="">
+              <p>Mohamed Elagamy</p>
+            </div>
+            <!-- *********************************** -->
+            <ul class="info">
+              <li style="color: #45b09e;"> <a href="{{url_for('user_informations')}}" style="color: #45b09e;"><i
+                    class="fa-solid fa-gear"></i>الاعدادات</a> </li>
+              <a href="{{url_for('login_page')}}">
+                <li><i class="fa-solid fa-door-open"></i> تسجبل الخروج</li>
+              </a>
+            </ul>
+
+          </div>
+        </div>
+
+        <ul class="main-nav">
+
+          <li class="hid"><a href="{{url_for('home_pages')}}"> <i class="fa-solid fa-house-chimney"></i>الرئيسيه</a>
+          </li>
+          <li class="hid"> <a href="{{url_for('authors_page')}}"><i class="fa-sharp fa-solid fa-users"></i>مؤلفو
+              الكتب </a> </li>
+          <li class="hid"><a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>اقسام
+              الكتب</a> </li>
+          <li class="spec">
+
+            <a href="#" id="test"> <i class="fa-solid fa-bars"></i>القائمه</a>
+            <!-- Start megamanu     -->
+            <div class="menu" id="megaMenu">
+              <ul class="links">
+                <li>
+                  <a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>اقسام
+                    الكتب</a>
+                </li>
+
+                <li>
+                  <a href="{{url_for('authors_page')}}"><i class="fa-sharp fa-solid fa-users"></i>مؤلفو
+                    الكتب </a>
+                </li>
+
+                <li>
+                  <a href="{{url_for('quotations_page')}}"><i class="fa-solid fa-quote-left"></i>اقتباسات</a>
+                </li>
+ 
+              </ul>
+
+
+            </div>
+            <!-- End megamanu     -->
+
+          </li>
+        </ul>
+
+        <a href="{{url_for('home_pages')}}" class="logo"> <img src="/static/upload/images/main.svg" style="width: 60px;
+          margin: 20px auto;" alt="logo"></a>
+      
+        </div>
+    </div>
+
+  </header>
+
+  <!-- header end -->
+
+  <main>
+
+
+    <div class="container" style=" margin-right: 105px;">
+
+
+      <div class="firstt">
+        <h1 style="text-align: right;">مؤلفو الكتب</h1>
+
+
+      </div>
+
+      <span style="color: #45b09e;font-size: 15px;display: inline-block; text-align: right;
+            padding-inline-start: 90%;     padding-left: 965px;">
+        268,136
+        مؤلف
+
+      </span>
+      <!-- ***************************************************** -->
+
+      <!-- ********************************************************* -->
+
+
+      <!-- ********************************************************************************************* -->
+      <div class="content">
+       
+        <div class="cards">
+          {%  for row in rows %}
+          <a href="{{url_for('author_detlais_ids' ,id_author=row.author_id)}}"
+            style="text-decoration: none ; color: inherit;">
+            
+            <div class="boxx" style="width: 300px;padding:20px">
+              <div class="image">
+                <img src="{{url_for('static' , filename='upload/images/'+row.link_image)}}">
+              </div>
+              <div class="name_job" style="padding-bottom: 0px;  ">{{row.name_author}}</div>
+              <hr style="width: 0%; ">
+
+              <div class="rating" style="padding-top:0px; ">
+                {% for rr in range(0,row.rate) %}
+                <i class="fas fa-star"></i>
+               {% endfor %}
+              </div>
+              <p style="height:21px; color:#45b09e; float: left; "><i class="fa fa-book"
+                  style="float: right; padding-top: 0px; padding-left: 5px;"></i> مولف كتاب</p>
+            </div>
+          </a>
+          <div style="width: 0px;padding:15px"></div>
+          {%  endfor %} 
+        </div>
+      </div>
+    </div>
+
+    <!-- ***************************************************************************** -->
+
+    <div class="wrapper">
+
+      <div class="X " style=>
+        <link rel='stylesheet'
+          href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+
+        <ul class="SG" style="padding-top: 220px;">
+          <div style="height: 50px;"></div>
+          <li class="sgLi">
+            <div class="list" style="padding-right: 20px; border-radius: 15px;">
+
+              <h3 style="padding-bottom:4px ; padding-top: 15px; "><i class="fa fa-search" aria-hidden="true"
+                  style="float: left; padding-left: 28px;"></i>مؤلفو الكتب</h3>
+              <hr>
+              <ul class="df" style=" list-style-type: none; ">
+                {% for row in rows %}
+                <a href="{{url_for('author_detlais_ids' ,id_author=row.author_id)}}" style=" color: black; ">
+                  <p style="height:21px;padding-bottom: 30px;"><i class="fa fa-book"
+                      style=" float: left;   color: #45b09e;"></i> {{row.name_author}}</p>
+                </a>
+                {% endfor %}
+
+
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+
+      </div>
+
+
+    </div>
+
+  </main>
+  </div>
+
+
+  <!-- footer Start  -->
+  <div style="height: 1550px; background-color:#f1f1f1 ;"></div>
+  <footer>
+    <div class="footer">
+      <div class="containerr">
+        <div class="box third">
+          <div class="adress">
+            <p> </i>كليه الحاسبات و المعلومات جامعه الفيوم</p>
+          </div>
+          <div class="time">
+            <p>
+
+              ساعات العمل : من 10:00 الي 18:00
+
+            </p>
+          </div>
+          <div class="phone">
+
+            +20123456789</p>
+          </div>
+        </div>
+        <div class="box Second">
+          <ul>
+            <li>اقسام الكتب</li>
+            <li>المؤلفون</li>
+            <li>اقتباسات</li>
+            <li>مراجعات</li>
+            <li>مجتمع المثقفين</li>
+
+          </ul>
+        </div>
+
+        <div class="box first">
+          <h1>المكتبه</h1>
+
+          <p> مكتبة رقمية للكتب والروايات الإلكترونية العربية والعالمية تحتوي آلاف الكتب والروايات في جميع المجالات
+          </p>
+        </div>
+      </div>
+      <p class="rights">
+        <span>جامعه الفيوم</span>
+      </p>
+    </div>
+
+  </footer>
+  <!-- footer Ends  -->
+</body>
+<script src="/static/js/action.js"></script>
+
+
+</html>

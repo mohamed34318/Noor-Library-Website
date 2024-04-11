@@ -1,0 +1,83 @@
+{% extends 'Home.html' %}
+
+{% block title %} Add authors {% endblock %}
+
+{% block content %}
+
+<div class="wrapper">
+  <div class="sidebar">
+    <h2>Admin Page</h2>
+    <ul>
+      <li><a href="{{url_for('admin_pages')}}" target="_blank"><i class="fas fa-home"></i>Home</a></li>
+      <li><a target="_blank" href="{{url_for('manage_user')}}"><i class="fas fa-user"></i>Manage user</a></li>
+      <li><a target="_blank" href="{{url_for('manage_books')}}"><i class="fas fa-user"></i>Manage Books</a></li>
+      <li><a href="{{url_for('manage_author')}}"><i class="fas fa-user"></i>Manage author</a>
+      </li>
+      <li><a target="_blank" href="{{url_for('home_pages')}}"><i class='fa fa-wpexplorer'></i> Noor library Website</a>
+      </li>
+      <li><a href="{{url_for('login_page')}}"><iconify-icon icon="bx:log-out" width="29" height="20"></iconify-icon>
+          LOG OUT</a></li>
+    </ul>
+    <div class="social_media">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <!-- ***************************************** -->
+  <div class="main_content">
+    <div class="header">Add author</div>
+    <div class="info">
+      <div class="container">
+        <div class="row">
+          <!-- <button type="button" class="btn btn-primary">Add Post</button> -->
+          <a href="{{url_for('manage_author')}}"> <button type="button" class="btn btn-secondary">Manage
+              author</button></a>
+          <h1 class="he23">Create author</h1>
+          <!-- form -->
+          <form method="post" enctype="multipart/form-data">
+
+            <p> <label for="author_id">author_id</label>
+              <input type="num" id="author_id" name="author_id" placeholder="author_id..">
+            </p>
+
+            <p> <label for="name_author">name_author</label>
+              <input type="text" id="name_author" name="name_author" placeholder="name_author..">
+            </p>
+
+            <p> <label for="rate">rate</label>
+              <input type="num" id="rate" name="rate" placeholder="rate..">
+            </p>
+
+            <p><label for="Description">Description</label>
+              <input type="text" id="Description" name="Description" placeholder="Description..">
+            </p>
+
+            <p> <label for="gender">gender</label>
+              <input type="text" id="gender" name="gender" placeholder="gender..">
+            </p>
+
+
+            <p><label for="nationality">nationality</label>
+              <input type="text" id="nationality" name="nationality" placeholder="nationality..">
+            </p>
+
+            <p> <label for="link_image">link_image</label>
+              <input type="file" id="link_image" name="link_image" placeholder="link_image..">
+            </p>
+
+            <br>
+            <input type="submit" value="Save">
+          </form>
+
+
+          <!-- ****** -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+
+  {% endblock %}

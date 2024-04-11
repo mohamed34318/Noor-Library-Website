@@ -1,0 +1,112 @@
+{% extends 'Home.html' %}
+
+{% block title %} update user {% endblock %}
+
+{% block content %}
+
+<div class="wrapper">
+  <div class="sidebar">
+    <h2>Admin Page</h2>
+    <ul>
+      <li><a href="{{url_for('admin_pages')}}" target="_blank"><i class="fas fa-home"></i>Home</a></li>
+      <li><a target="_blank" href="{{url_for('manage_user')}}"><i class="fas fa-user"></i>Manage user</a></li>
+      <li><a target="_blank" href="{{url_for('manage_books')}}"><i class="fas fa-user"></i>Manage Books</a></li>
+      <li><a href="{{url_for('manage_author')}}"><i class="fas fa-user"></i>Manage author</a>
+      </li>
+      <li><a target="_blank" href="{{url_for('home_pages')}}"><i class='fa fa-wpexplorer'></i> Noor library Website</a>
+      </li>
+      <li><a href="{{url_for('login_page')}}"><iconify-icon icon="bx:log-out" width="29" height="20"></iconify-icon>
+          LOG OUT</a></li>
+    </ul>
+    <div class="social_media">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <!-- ***************************************** -->
+  <div class="main_content">
+    <div class="header">update User</div>
+    <div class="info">
+      <div class="container">
+        <div class="row">
+    
+          <h1 class="he23">Create User</h1>
+
+          <form class="row g-3" action="/update_user/{{data.Customer_id}}" method="POST" enctype="multipart/form-data">
+
+            <p> <label for="customer_id">customer_id</label>
+              <input type="num" id="customer_id" name="customer_id" disabled value="{{data.Customer_id}}"
+                placeholder="customer_id..">
+            </p>
+
+            <p><label for="customer_name">customer_name</label>
+              <input type="text" id="customer_name" name="customer_name" value="{{data.customer_name}}" required
+                placeholder="customer_name..">
+            </p>
+
+            <p> <label for="country">country</label>
+              <input type="text" id="country" name="country" value="{{data.country}}" required placeholder="country..">
+            </p>
+
+            <p> <label for="age">age</label>
+              <input type="num" id="age" name="age" value="{{data.age}}" required placeholder="age..">
+            </p>
+
+            <p> <label for="cust_year">cust_year</label>
+              <input type="num" id="cust_year" name="cust_year" value="{{data.cust_year}}" required
+                placeholder="cust_year..">
+            </p>
+            <p> <label for="cust_month">cust_month</label>
+              <input type="num" id="cust_month" name="cust_month" value="{{data.cust_month}}" required
+                placeholder="cust_month..">
+            </p>
+            <p><label for="cust_day">cust_day</label>
+              <input type="num" id="cust_day" name="cust_day" value="{{data.cust_day}}" required
+                placeholder="cust_day..">
+            </p>
+
+            <p> <label for="gender">gender</label>
+              <input type="text" id="gender" name="gender" value="{{data.gender}}" required placeholder="gender..">
+            </p>
+
+            <p><label for="Number_visa">Number_visa</label>
+              <input type="num" id="Number_visa" name="Number_visa" required value="{{data.Number_visa}}"
+                placeholder="Number_visa..">
+            </p>
+            <p> <label for="cvv">cvv</label>
+              <input type="num" id="cvv" name="cvv" value="{{data.cvv}}" required placeholder="cvv..">
+            </p>
+
+            <p><label for="email">email</label>
+              <input type="email" id="email" name="email" value="{{data.email}}" required placeholder="email..">
+            </p>
+
+            <p> <label for="password_user">password_user</label>
+              <input type="password" id="password_user" name="password_user" required value="{{data.password_user}}"
+                placeholder="password_user..">
+            </p>
+
+            <p> <label for="visa_date">visa_date</label>
+              <input type="date" id="visa_date" name="visa_date" required value="{{data.visa_date}}"
+                placeholder="visa_date..">
+            </p>
+
+            <p> <label for="image_file">image_file</label>
+              <input type="file" id="image_file" name="image_file" required placeholder="image_file..">
+            </p>
+
+            <input type="submit" value="Save">
+          </form>
+
+
+          <!-- ****** -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+
+  {% endblock %}

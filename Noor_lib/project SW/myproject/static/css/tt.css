@@ -1,0 +1,92 @@
+body .active{
+    overflow: hidden;
+}
+
+
+.n{
+    font-weight: bold;
+}
+.ww{
+    padding: 20px;
+    background-color: bisque;
+}
+.ww.active{
+    background-color: aqua;
+}
+
+#ee{
+    display:none;
+   flex-direction:column;
+   justify-content:space-around ;
+    background-color: aqua;
+   width: 38%;
+   height: 600px;
+   position: fixed;
+   margin:auto;
+   margin-top: 0%;
+   border-radius: 5px;
+   margin-left: 30%;
+   z-index: 1;
+   box-shadow: 0px 8px 16px 0px rgb(0, 19, 128);
+   transform: dis;
+   transition: 4s ease;
+   transition-duration:margin-left ;
+}
+#ee.active{
+    display: flex;
+}
+.n:hover {
+    background-color: beige;
+}
+
+
+#ee #div2{
+    display: flex;
+    flex-direction: column;
+    height: 55%;
+
+}
+
+
+#btn{
+    width: 80%;
+    border-radius: 7px;
+    border: 2px white solid;
+    margin:auto ;
+    cursor: pointer;
+}
+
+
+#btn:hover{
+      border: 2px blue solid !important;
+}
+#commentBox{
+    width: 80%;
+    height: 150px;
+    
+    margin:auto;
+    margin-bottom: 30px;
+    background-color: hsl(0, 0%, 100%);
+    border: 2px white solid;
+    border-radius: 5px;
+}
+
+#commentBox:hover{
+    border: 2px blue solid;
+    
+}
+
+#img{
+    width: 30px;
+}
+#img.active{
+    width: 30px;
+}
+#span{
+    padding: 20px;
+    color: cornflowerblue;
+
+    font-size: 20px;
+}
+
+

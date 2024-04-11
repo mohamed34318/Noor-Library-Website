@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UFT-8" />
+    <meta name="viewport" content="width=device-width , initial-scale =1.0" />
+
+    <link rel="stylesheet" href="../../CSS/all.min.css">
+    <link rel="stylesheet" href="../../CSS/pages.css">
+    <link rel="stylesheet" href="../../CSS/normalize.css">
+    <!-- ********************************************************************** -->
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/all.min_page_sections_quotations.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/pages.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/normalize_page_sections_quotations.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/all.min_main_details.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/normalize__main_details.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/style__main_details.css')}}">
+    <!-- ********************************************************************** -->
+    <title> الديناميكا الهوائية</title>
+</head>
+
+<body>
+    <!--start header -->
+    <div class="header">
+        <div class="container">
+            <div class="settings">
+                <img class='avatar' src="/static/upload/images/avatar-05.png" alt="logo">
+                <div class="settingsMenu">
+                    <div class="settingsheader">
+                        <img src="/static/upload/images/avatar-05.png" alt="">
+                        <p>Mohamed Saad</p>
+                    </div>
+                    <ul class="info">
+                        <li style="color: #45b09e;"> <a href="{{url_for('user_informations')}}"
+                                style="color: #45b09e;"><i class="fa-solid fa-gear"></i>الاعدادات</a> </li>
+                        <a href="{{url_for('login_page')}}">
+                            <li><i class="fa-solid fa-door-open"></i> تسجبل الخروج</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <ul class="main-nav">
+
+                <li class="hid"><a href="{{url_for('home_pages')}}"> <i
+                            class="fa-solid fa-house-chimney"></i>الرئيسيه</a>
+                </li>
+                <li class="hid"> <a href="{{url_for('authors_page')}}"><i class="fa-sharp fa-solid fa-users"></i>مؤلفو
+                        الكتب </a> </li>
+                <li class="hid"><a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>اقسام
+                        الكتب</a> </li>
+                <li class="spec">
+
+                    <a class="mainLink" href="#" id="test"> <i class="fa-solid fa-bars"></i>القائمه</a>
+                    <!-- Start megamanu     -->
+                    <div class="menu" id="megaMenu">
+                        <ul class="links">
+                            <li>
+                                <a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>اقسام
+                                    الكتب</a>
+                            </li>
+
+                            <li>
+                                <a href="{{url_for('authors_page')}}"><i class="fa-sharp fa-solid fa-users"></i>مؤلفو
+                                    الكتب </a>
+                            </li>
+
+                            <li>
+                                <a href="{{url_for('quotations_page')}}"><i
+                                        class="fa-solid fa-quote-left"></i>اقتباسات</a>
+                            </li>
+                            <!-- <li>
+                                <a href="{{url_for('Educated_community')}}"><i
+                                        class="fa-solid fa-sociate-left"></i>مجتمع المثقفين</a>
+                            </li>
+
+                            <li>
+                                <a href="{{url_for('reviews_page')}}"><i class="fa-solid fa-star"></i>مراجعات</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <!-- End megamanu   -->
+
+                </li>
+            </ul>
+            <a href="{{url_for('home_pages')}}" class="logo"> <img src="/static/upload/images/main.svg" style="width: 60px;
+                margin: 20px auto;" alt="logo"></a>
+        </div>
+    </div>
+    <!-- header end -->
+    <h1 class="adders" style="text-align: right;margin-right: 30px; line-height:1.3;margin-top: 74px;"> الديناميكا الهوائية </h1>
+    <div class="content">
+        <div class="container">
+            <div class="sidebar">
+                <h3>اقسام الكتب</h3>
+                <ul>
+                    {% for row in data %}
+                    <li>{{row.part_sections}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="mainContent">
+                <div class="books">
+                    
+                    <!-- ************************************ -->
+                    {% for row in rows %}
+                    <div class="card">
+                        <div class="rate">
+                            {% for x in range(0 ,row.rate) %}
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            {% endfor %}
+                        </div>
+                        <div class="image">
+                            <img src="{{url_for('static', filename= 'upload/images/' + row.link)}}" alt="logo">
+                        </div>
+                        <div class="text">
+                            <h2>{{row.book_name}}</h2>
+                            <p>date : {{row.book_date}}</p>
+                            <p>price : {{row.price}} $</p>
+                        </div>
+                        <a href="{{url_for('Details_of_books' , id_book=row.book_id)}}">
+                            <div class="info">
+                                <h3>تفاصيل الكتاب</h3>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </a>  
+                    </div>
+                    {% endfor %}
+
+                    <!-- ******************************************* -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="box third">
+                <div class="adress">
+                    <p> <i class="fa-solid fa-location-dot"></i>كليه الحاسبات و المعلومات جامعه الفيوم</p>
+                </div>
+                <div class="time">
+                    <p>
+                        <i class="fa-solid fa-clock"></i>
+                        ساعات العمل : من 10:00 الي 18:00
+
+                    </p>
+                </div>
+                <div class="phone">
+                    <p><i class="fa-solid fa-phone"></i>
+                        +20123456789</p>
+                </div>
+            </div>
+            <div class="box Second">
+                <ul>
+                    <li>اقسام الكتب</li>
+                    <li>المؤلفون</li>
+                    <li>اقتباسات</li>
+                    <li>مراجعات</li>
+                    <li>مجتمع المثقفين</li>
+
+                </ul>
+            </div>
+
+            <div class="box first">
+                <h1>المكتبه</h1>
+                <div class="social">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <p> مكتبة رقمية للكتب والروايات الإلكترونية العربية والعالمية تحتوي آلاف الكتب والروايات في جميع
+                    المجالات
+                </p>
+            </div>
+        </div>
+        <p class="rights">
+            <i class="fa-solid fa-copyright"></i>
+            <span>جامعه الفيوم</span>
+        </p>
+    </div>
+</body>
+<script src="/static/js/action.js"></script>
+
+</html>

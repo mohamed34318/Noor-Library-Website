@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" >
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="stylesheet" href="../CSS/all.min.css">
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="stylesheet" href="../CSS/new_style.css">
+    <link rel="stylesheet" href="../CSS/head.css"> -->
+
+    <!-- ********************************************************* -->
+<link rel="stylesheet" href="{{url_for('static' , filename= 'css/all.min_page_sections_quotations.css')}}">
+<link rel="stylesheet" href="{{url_for('static' , filename= 'css/normalize_page_sections_quotations.css')}}">
+<link rel="stylesheet" href="{{url_for('static' , filename= 'css/new_style_page_sections.css')}}">
+<link rel="stylesheet" href="{{url_for('static' , filename= 'css/head_page_sections.css')}}">
+
+
+    <!-- *-************************************************** -->
+    <title>أقسام الكتب - مكتبة نور</title>
+<!-- ************************* -->
+<div id="header">
+    <div id="container">
+         <table>
+        <tr style="width: 100%; height:10px;">
+        <td>
+          <div class="settings">
+        
+          <div class="settingsMenu">
+            <!-- *********************************** -->
+            <ul class="info"> 
+              <a href="{{url_for('login_page')}}" >
+                  <li style=" margin-left: 43px;"><i class="fa-solid fa-door-open"></i> تسجبل الخروج</li>
+              </a>
+          </ul>
+
+          </div>
+        </div>
+        </td>
+        <td>
+        <ul class="main-nav">
+            <li  >
+                
+                <a href="#" id="test" > القائمه<i class="fa-solid fa-bars"></i></a>
+                <!-- Start megamanu     -->
+                <div class="menu" id="megaMenu" style="filter: blur(0)!important;  text-align: center;"> 
+                    <ul class="links">
+                        <li>
+                            <a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>  اقسام
+                                الكتب</a>
+                        </li>
+
+                        <li>
+                            <a href="{{url_for('authors_page')}}"> <i class="fa-sharp fa-solid fa-users" ></i> مؤلفوالكتب </a>
+                        </li>
+
+                        <li>
+                            <a href="{{url_for('quotations_page')}}"><i
+                                    class="fa-solid fa-quote-left"></i>اقتباسات</a>
+                        </li>
+                        <!-- <li>
+                            <a href="{{url_for('Educated_community')}}"><i
+                                    class="fa-solid fa-sociate-left"></i>مجتمع المثقفين</a>
+                        </li>
+
+                        <li>
+                            <a href="{{url_for('reviews_page')}}"><i class="fa-solid fa-star"></i>مراجعات</a>
+                        </li> -->
+                    </ul>
+
+                </div>
+                <!-- End megamanu     -->
+                
+            </li>
+            <li class="hid"><a href="{{url_for('home_pages')}}"> <i
+                class="fa-solid fa-house-chimney"></i>الرئيسيه</a>
+    </li>
+    <li class="hid"> <a href="{{url_for('authors_page')}}"><i class="fa-sharp fa-solid fa-users"></i>مؤلفو
+            الكتب </a> </li>
+    <li class="hid"><a href="{{url_for('sections_page')}}"><i class="fa-solid fa-network-wired"></i>اقسام
+            الكتب</a> </li>
+    <li class="spec">
+        <a href="{{url_for('home_pages')}}" class="logo"> <img src="/static/upload/images/main.svg" style="width: 60px;
+            margin: 20px auto;" alt="logo"></a>    
+    </ul>
+
+        </td>
+        </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<!-- ***************** -->
+    </head>
+
+
+<body>
+
+    <div class="container">
+        <!-- headr of container-->
+        <h1 style="line-height:1.3;margin: 15px;">أقسام الكتب</h1>
+        <div class="main">
+            
+        <!-- search box-->
+      
+        <!-- كل قسم لوحدهdivده box -->
+        <div class="box">
+            <h2>الدين الإسلامي والعلوم الشرعية</h2>
+            <div class="row">
+                <a href="{{url_for('polite_america_tranlated')}}"><h3>آداب وأخلاق إسلامية</h3></a>
+                <a href="{{url_for('Abu_Hanifa_al_Numan')}}"><h3>أبو حنيفة النعمان</h3></a>
+                <a href="{{url_for('Abu_Hurairah')}}"><h3>أبو هريرة</h3></a>
+                <a href="{{url_for('Hadiths_of_Judgments')}}"><h3>أحاديث الأحكام</h3></a>
+                <a href="{{url_for('The_provisions_of_jihad_in_Islam')}}"><h3>أحكام الجهاد فى الإسلام</h3></a>           
+            </div>
+        </div>
+        <!--end of box-->
+        <div class="box">
+            <h2>الأدب العالمي والأدب المترجم</h2>
+            <div class="row">
+                <a href="{{url_for('Latin_American_literature_translated')}}"><h3>أدب أمريكا اللاتينية مترجم</h3></a>
+                <a href="{{url_for('Translator_morality')}}"><h3>أدب الأخلاق مترجم</h3></a>
+                <a href="{{url_for('Translated_childrens_literature')}}"><h3>أدب الأطفال مترجم</h3></a>
+                <a href="{{url_for('Etiquette_of_difference_translated')}}"><h3>أدب الإختلاف مترجم</h3></a>
+                <a href="{{url_for('Esperanto_literature_translated')}}"><h3>أدب الإسبيرانتو مترجم</h3></a>           
+            </div>
+        </div>
+        <!--end of box-->    
+        <div class="box">
+            <h2>العلوم العامة والعلوم الطبيعية</h2>
+            <div class="row">
+                <a href="{{url_for('X_ray')}}"><h3>الأشعة السينية</h3></a>
+                <a href="{{url_for('Colors_and_their_meanings')}}"><h3>الألوان ودلالاتها</h3></a>
+                <a href="{{url_for('geology')}}"><h3>الجيولوجيا</h3></a>
+                <a href="{{url_for('Aerodynamics')}}"><h3>الديناميكا الهوائية</h3></a>
+        
+            </div>
+        </div>
+    
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer m-t-30 ">
+        <p style="margin-bottom: 15px;" class="naskh-r container">
+            الملكية الفكرية محفوظة للمؤلفين المذكورين على الكتب والمكتبة غير مسئولة عن افكار المؤلفين <br>
+            يتم نشر الكتب القديمة والمنسية التي أصبحت في الماضي للحفاظ على التراث العربي والإسلامي <br>
+            ، والكتب التي يتم قبول نشرها من قبل مؤلفيها. <br>وينص الإعلان العالمي لحقوق الإنسان على أنه "لكل شخص حق المشاركة الحرة في حياة المجتمع الثقافية، وفي الاستمتاع بالفنون، والإسهام في التقدم العلمي وفي الفوائد التي تنجم عنه. لكل شخص حق في حماية المصالح المعنوية والمادية المترتِّبة على أيِّ إنتاج علمي أو أدبي أو فنِّي من صنعه".
+        </p>
+        <div class="m-t-10">
+            <a href="/terms">إتفاقية الإستخدام</a>
+            &nbsp;&nbsp;<a href="/privacy-policy">سياسة الخصوصية</a>
+            &nbsp;&nbsp;<a href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D9%85%D9%87-%D9%86%D9%88%D8%B1-%D9%88%D8%AD%D9%82%D9%88%D9%82-%D8%A7%D9%84%D9%86%D8%B4%D8%B1-pdf">حقوق الملكية</a>
+            &nbsp;&nbsp;<a href="/about">عن المكتبة</a>
+            &nbsp;&nbsp;<a href="/contact-us">أتصل بنا</a>
+            &nbsp;&nbsp;<a href="/donate">تبرع للمكتبة</a>
+            &nbsp;&nbsp;
+        </div>
+    </div>
+    <!-- <script src="../JS/action.js"></script>
+    <script src="../JS/BookReveiws.js"></script> -->
+</body>
+<script src="/static/js/action_page_sections_quotations.js"></script>
+<script src="/static/JS//BookReveiws_page_sections.js"></script>
+</html>

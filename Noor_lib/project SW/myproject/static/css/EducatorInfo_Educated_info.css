@@ -1,0 +1,571 @@
+body{
+    background-color: rgb(254, 246, 246)!important;
+}
+.educatorInfo{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  
+    background-color: rgba(163, 196, 203, 0.661);
+   
+    margin: 50px auto 50px auto;
+    border-radius: 30px 30px 0 0;
+    border-width:5px 0px 0px 0px;
+    border-style: solid;
+    border-color: rgb(25, 179, 199);
+}
+h2{
+    font-size: 20px!important;
+    padding: 20px;
+}
+.educatorInfo img{
+    width: 15%;
+    margin:auto;
+    margin-top: 30px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 2px solid rgb(104, 100, 100);
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    display: flex;
+    margin: auto;
+
+}
+.cell{
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    width: 23%;
+    align-items: center;
+    position: relative;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #00c4ff1c;
+    
+}
+
+.row .cell .rate1{
+    display: flex;
+   padding: 15px 0;
+    color: #000;
+    width: 50%!important;
+}
+.cont{
+    display: flex;
+width: 50%;
+}
+.row .cell .rate1 h4{
+        top: -29%!important;
+        left: 5%;
+        width: 90px;
+        text-align: center;
+}
+.row .cell .rate1 h4::after{
+        
+        left: 9%;
+        
+}
+.row .cell .rate1 .rank::after{
+    left: 25%!important;
+}
+.row .cell .rate{
+   display: flex;
+    margin: auto;
+    width: 100%!important;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.row .cell .rate p{
+    font-size: 17px;
+}
+.row .cell .rate img{
+    width: 19px;
+    
+}
+.row .cell .rate h4{
+    top:70%;
+    font-size: 16px;
+}
+.activity{
+    width: 100%;
+    display: flex;
+}
+.activity .rev,.book,.quot{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 33.33333%!important;
+    cursor: pointer;
+     
+padding: 60px 0 16px 0;
+    
+}
+
+.activity span::before {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    height: 0px!important;
+    border-bottom: 3px solid #1963d303;
+    width: var(--width,0px);
+    background-color: rgb(41 130 141);
+}
+
+
+.activity  span:hover::before{
+    animation: anim-state 0.5s forwards;
+}
+
+@keyframes anim-state {
+    0% {
+        width: 0;
+        height: 3px;
+    }
+
+    100% {
+        width: 100%;
+        height: 3px;
+    }
+}
+.activity span:hover {
+    color:#1963d3;
+    
+    
+  
+    
+    filter: grayscale(0%);
+}
+.activity span:hover img{
+     filter: grayscale(0%);
+}
+.activity span img,.revimg,.bookimg,.quotimg{
+    border-radius: 0;
+    border: 0;
+    width: 18%;
+    filter: grayscale(200%);
+}
+.revimg.active{
+     filter: grayscale(0%);
+}
+.bookimg.active{
+     filter: grayscale(0%);
+}
+.quotimg.active{
+     filter: grayscale(0%);
+}
+.rev.active{
+     color:#1963d3;
+}
+.book.active{
+     color:#1963d3;
+}
+.book.active::before{
+     width: 100%!important;
+}
+.quot.active::before{
+     width: 100%!important;
+}
+.rev.active::before{
+     width: 100%!important;
+}
+.quot.active{
+     color:#1963d3;
+}
+.activity span p{
+    text-align: center;
+    padding: 5px;
+    font-size: 19px;
+}
+
+@media (max-width:1000px) {
+    .cell{
+        width: 48%;
+        margin-bottom: 20px;
+    }
+.row .cell .rate h4 {
+    top: 89%;
+
+}}
+@media (max-width:500px){
+    .educatorInfo img {
+    width: 60%!important;
+}
+}
+
+
+
+/*  */
+
+
+body{
+    background-color:#f0eded ;
+    text-decoration: rtl;
+}
+#div-container {
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    
+    margin:50px auto 30px auto;
+    width: 70%!important;
+    text-align: end;
+    margin-right: auto!important;
+    margin-left: auto!important;
+    border-radius: 5px;
+     box-shadow: 0px 8px 16px 9px rgb(131, 135, 155);
+
+}
+
+
+
+
+.comment {
+    
+    justify-content: space-around;
+    background-color: rgb(255, 252, 252);
+    padding-right: 20px;
+    border-right: 2px black solid;
+    color: rgb(174, 131, 131);
+    margin-bottom: 30px;
+}
+
+.book-name {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    color: #000;
+    font-family: cursive;
+    text-align: end;
+    padding-right: 15px;
+}
+.book-name:hover{
+    text-decoration: underline;
+    color: rgb(21, 86, 86);
+}
+.comment_content{
+    
+    width: 90%;
+    height: 100%;
+    background-color: white;
+}
+
+
+
+.content{
+    display: flex;
+    justify-content: end;
+    width: 99%;
+    padding: 15px;
+    text-align: start;
+    border-radius: 5px;
+    background-color: #f0eded;
+}
+.user-name {
+    margin: 0px;
+    padding: 3px 0 3px 10px;
+    padding-right: 0!important;
+    font-size: 20px;
+    color: #317d71;
+    font-family: cursive;
+    direction: rtl;
+}
+.user-name:hover{
+    text-decoration: underline;
+    color: blueviolet;
+}
+.data .rate{
+        color: #000;
+    margin-left: 0;
+    padding-right: 0;
+    direction: rtl;
+    background-color: #f5f5dc00;
+}
+.content p{
+    font-family: sans-serif;
+    padding: 10px;
+    padding-right: 0px!important;
+    color: rgb(49, 45, 45);
+    margin-top: 0px;
+    direction: rtl!important;
+}
+
+.data {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+ 
+div#div-container2 {
+       display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+div#div-container2 div{
+       
+    width: 25%;
+    
+}
+
+.card{
+    transition: 0.5s;
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 90%!important;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  height: fit-content;
+    background-color: white;
+}
+.card .image {
+    width: 60%!important;
+}
+.card .image img{
+    width: 100%;
+}
+ .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 1px 1px 20px 1px #45b09e59;
+
+
+    transition: var(--main-transition);
+
+}
+
+.card .rate{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    color: var(--main-color);
+}
+.card .rate img{
+    width: 20px;
+}
+.card .rate i {
+    margin: 5px;
+}
+
+.card .text{
+    
+    
+    text-align: center;
+    width: 90%!important;
+}
+
+.card .text h2 {
+       font-weight: bold;
+    font-size: 20px;
+    margin: 11px auto 36px;
+    padding: 0;
+    width: 100%!important;
+    
+}
+
+.card .text p{
+    color: var(--main-color);
+    line-height: 1.8;
+    width: fit-content;
+    margin: auto;
+    border-bottom: 2px solid #ececec;
+}
+
+.card .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    font-size: 14px;
+    width: 100%!important;
+    align-content: center;
+}
+
+.card .info:hover{
+    cursor: pointer;
+}
+.card .info h3{
+    margin: 20px 15px;
+    
+}
+.card .info i{
+    margin: 15px 20px;
+    transition: 0.3s;
+
+    animation: anim-arr 0.5s infinite linear;
+
+}
+
+@keyframes anim-arr {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-5px);    
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width:767px) {
+    .sidebar{
+        display: none;
+    }
+    .contentHeader{
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+    }
+}
+@media (max-width: 1200px){
+div#div-container2 div {
+    width: 33.3333%;
+}
+}
+@media (max-width: 700px){
+div#div-container2 div {
+    width: 50%;
+}
+}
+div#div-container3 div{
+       
+    width: 100%;
+    
+}
+
+#div-container3,#div-container2{
+background-color: #fdf5f5;
+}
+@media (max-width:500px) {
+    #div-container{
+        width: 100%!important;
+        padding: 10px;
+        margin-bottom: 30px!important;
+    }
+
+    .quote-content-child {
+    font-size: 15px!important;
+}
+    .book-name{
+        font-size: 15px;
+    }
+    .img{
+        width: 1px;
+    }
+    .user-name{
+        font-size: 10px;
+    }
+    .rate{
+        font-size: 9px;
+
+    }
+    .educatorInfo{
+        width: 100%;
+    }
+    .content{
+        word-wrap: break-word;
+        padding-left: 7px;
+    }
+    .data{
+        font-size: 10px;
+        word-wrap: break-word;
+
+    }
+    .card .image img{
+        width: 60%!important;
+    }
+    .educatorInfo h2{
+        font-size: 17px!important;
+    }
+    .activity span img, .revimg, .bookimg, .quotimg{
+        width: 30%!important;
+    }
+    
+    .educatorInfo img{
+        width: 95px!important;
+        margin-top: 10px;
+    }
+    .img .user{
+        width: 50px!important;
+        
+    }
+    .quote-content-child{
+        font-size: 15px!important;
+    }
+    
+
+}
+.single-quote {
+    font-size: 18px;
+    border: 1px solid #dadde1;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+}
+.quote-content-child {
+    line-height: 1.7;
+    font-size: 20px;
+    background-color: rgba(255,255,255,.65);
+    padding: 10px;
+    border-radius: 4px;
+}
+.pull-right {
+    display: flex;
+    float: right!important;
+    padding: 10px;
+}
+.pull-left {
+    float: left!important;
+    padding: 10px;
+}
+a{
+    color: #000;
+    transition: all ease-in-out .2s;
+    text-decoration: none;
+    padding: auto;
+    background-color: transparent;
+ }
+ a:focus,a:hover {
+    color: #317d71;
+    text-decoration: underline
+ }
+ :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+
+ .cell {
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    width: 39%;
+    align-items: center;
+    position: relative;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #00c4ff1c;
+    margin: 10px auto;
+}

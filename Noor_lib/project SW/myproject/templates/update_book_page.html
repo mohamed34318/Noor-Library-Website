@@ -1,0 +1,75 @@
+{% extends 'Home.html' %}
+
+{% block title %} update book {% endblock %}
+
+{% block content %}
+
+<div class="wrapper">
+  <div class="sidebar">
+    <h2>Admin Page</h2>
+    <ul>
+      <li><a href="{{url_for('admin_pages')}}" target="_blank"><i class="fas fa-home"></i>Home</a></li>
+      <li><a target="_blank" href="{{url_for('manage_user')}}"><i class="fas fa-user"></i>Manage user</a></li>
+      <li><a target="_blank" href="{{url_for('manage_books')}}"><i class="fas fa-user"></i>Manage Books</a></li>
+      <li><a href="{{url_for('manage_author')}}"><i class="fas fa-user"></i>Manage author</a>
+      </li>
+      <li><a target="_blank" href="{{url_for('home_pages')}}"><i class='fa fa-wpexplorer'></i> Noor library Website</a>
+      </li>
+      <li><a href="{{url_for('login_page')}}"><iconify-icon icon="bx:log-out" width="29" height="20"></iconify-icon>
+          LOG OUT</a></li>
+    </ul>
+  </div>
+  <!-- ***************************************** -->
+  <div class="main_content">
+    <div class="header">update Post</div>
+    <div class="info">
+      <div class="container">
+        <div class="row">
+          <h1 class="he23">update book</h1>
+          <!-- form -->
+          <form method="POST" action="/updatebook/{{data3.book_id}}" enctype="multipart/form-data">
+
+            <p> <label for="book_id"> book_id</label>
+              <input type="num" id="book_id" name="book_id" disabled value="{{data3.book_id}}" placeholder="book_id..">
+            </p>
+
+            <p> <label for="book_name"> book_name</label>
+              <input type="text" id="book_name" name="book_name" value="{{data3.book_name}}" placeholder="book_name..">
+            </p>
+            <p><label for="link">link</label>
+              <input type="file" id="link" name="link" value="{{data3.link}}" placeholder="link..">
+            </p>
+            <p> <label for="rate">rate</label>
+              <input type="num" id="rate" name="rate" value="{{data3.rate}}" placeholder="rate..">
+            </p>
+
+            <p><label for="book_date">book_date</label>
+              <input type="text" id="book_date" name="book_date" value="{{data3.book_date}}" placeholder="book_date..">
+            </p>
+
+            <p> <label for="price">price</label>
+              <input type="num" name="price" value="{{data3.price}}" placeholder="price..">
+            </p>
+
+            <p> <label for="author_id">author_id</label>
+              <input type="num" name="author_id" value="{{data3.author_id}}" placeholder="author_id..">
+            </p>
+
+            <p> <label for="quantity_book">quantity_book</label>
+              <input type="num" name="quantity_book" value="{{data3.quantity_book}}" placeholder="quantity_book..">
+            </p>
+
+            <br>
+            <input type="submit" value="Save">
+          </form>
+
+
+          <!-- ****** -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+  {% endblock %}

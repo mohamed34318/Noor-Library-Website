@@ -1,0 +1,303 @@
+:root {
+   --main-color: #45b09e;
+   --main-color-alt: #326d6cde;
+   --main-transition: 0.3s;
+   --main-padding-top: 100px;
+   --main-padding-bottom: 100px;
+}
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: 'Open Sans', sans-serif;
+   font-family: 'Work Sans', sans-serif;
+
+}
+
+a {
+   text-decoration: none;
+}
+
+ul {
+   list-style: none;
+}
+
+
+
+/* خلي الجزء اللي فوق ده اول حاجه في الصفحه */
+
+
+/* --------------------------------------------------------------------- -----------------*/
+
+/* حط بقي كود ال س اس اس  بتعاك هنا */
+
+@media (max-width:1050px) {
+   #header{
+   width: 100%;
+   }
+}
+/*Header start*/
+#header {
+   background-color: white;
+   box-shadow: 0 0 10px #ddd;
+   position: relative;
+
+   box-shadow: 5px 5px 20px var(--main-color-alt);
+
+}
+
+#header #container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   position: relative;
+
+
+}
+
+#header #container .settings {
+   width: fit-content;
+   text-align: center;
+}
+
+#header #container .settings #avatar {
+   width: 30%;
+   border-radius: 30px;
+}
+
+#settingsMenu {
+   border: 2px solid var(--main-color);
+   box-shadow: 2px 2px 10px var(--main-color);
+   background-color: white;
+   position: relative;
+   z-index: 7;
+   border-radius: 30px;
+   margin: 10px;
+   width: 25%;
+   padding: 11px;
+   display: none;
+}
+
+
+#settingsMenu .settingsheader::before {
+   content: "";
+   position: absolute;
+
+   border-width: 15px;
+   border-color: transparent transparent white transparent;
+   border-style: solid;
+   top: -16%;
+   left: 21%;
+}
+
+#settingsMenu .settingsheader {
+   margin: 10px 0 2px;
+   /* position: relative; */
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+   align-items: center;
+   border-bottom: 2px solid #DCDCDC;
+   font-weight: bold;
+}
+
+#settingsMenu .settingsheader img {
+   width: 18%;
+   border-radius: 30px;
+   margin-bottom: 5px;
+}
+
+#settingsMenu .info {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   font-size: 18px;
+
+}
+
+#settingsMenu .info li:not(:last-child) {
+   border-bottom: 2px solid #DCDCDC;
+}
+
+#settingsMenu .info li {
+   transition: var(--main-transition);
+   color: var(--main-color);
+   width: 100%;
+   padding: 10px 30px 10px 10px;
+   display: flex;
+   justify-content: end;
+}
+
+#settingsMenu .info li i {
+   padding-left: 10px;
+}
+
+#settingsMenu .info li:hover {
+   background-color: #acf1f040;
+   cursor: pointer;
+}
+
+#settingsMenu.open-settings {
+   display: block;
+   position: fixed;
+   filter: blur();
+}
+
+
+table{
+   width: 80%;
+}
+#header .logo {
+   color: var(--main-color);
+   font-weight: 700;
+   font-size: 25px;
+   padding-right: 35px;
+   height: 72px;
+   padding-right: 35px;
+   display: flex;
+   width: 100%;
+   text-align: start;
+   margin: auto;
+   /* margin-right: 20px; */
+   justify-content: end;
+   align-items: center;
+}
+
+
+
+#header .main-nav {
+   display: flex;
+   justify-content: end;
+margin:auto;
+
+}
+
+
+
+.main-nav>li>a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 72px;
+   position: relative;
+   color: black;
+   padding: 0 35px 0px;
+   transition: var(--main-transition);
+   overflow: hidden;
+}
+
+
+.main-nav>li>a::before {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 4px;
+   top: 0;
+   left: -100%;
+   background-color: var(--main-color);
+   transition: var(--main-transition);
+}
+
+.main-nav>li>a:hover {
+   color: var(--main-color);
+   background-color: aliceblue;
+
+}
+
+.main-nav>li>a:hover::before {
+   left: 0;
+}
+
+.main-nav li a i {
+   padding-left: 10px;
+}
+
+.menu::before {
+   content: "";
+   position: absolute;
+
+   border-width: 20px;
+   border-color: transparent transparent white transparent;
+   border-style: solid;
+   top: -10%;
+   left: 88px;
+}
+:root{
+   --scroll-margin-left:auto ;
+}
+.menu {
+   position: absolute;
+   left:var(--scroll-margin-left);
+   margin-left: -25px;
+   padding: 20px;
+   background-color: white;
+   width: 16.8%;
+   top: calc(100% + 10px);
+   gap: 40px;
+   border-bottom: 4px solid var(--main-color-alt);
+
+   display: flex;
+   justify-content: space-between;
+   display: none;
+
+   border-radius: 5px;
+
+}
+
+#megaMenu.open-menu {
+   display: inline;
+   z-index: 2;
+}
+
+
+
+
+.menu .links {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   width: 100%;
+
+}
+
+.menu .links li {
+   padding: 10px 0;
+   font-size: 20px;
+   transition: var(--main-transition);
+
+
+
+}
+
+.menu .links li:not(:last-child) {
+   border-bottom: 2px solid #ddd;
+}
+
+.menu .links li:hover {
+   padding-right: 30px;
+   background-color: #acf1f040;
+}
+
+.menu .links li a {
+   color: var(--main-color);
+   display: flex;
+   justify-content: end;
+}
+
+.menu .links li a i {
+   margin-right: 20px;
+   color: #023837de;
+}
+
+/*Header End*/
